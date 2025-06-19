@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 
 const montserrat = Montserrat({
@@ -121,6 +122,11 @@ export default function RootLayout({
   return (
     <html lang="de" suppressHydrationWarning>
       <head>
+        {/* Netlify Identity Widget für CMS */}
+        <Script 
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          strategy="beforeInteractive"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -181,10 +187,26 @@ export default function RootLayout({
             <Navigation />
             <main id="main-content" className="flex-1">
               {children}
+              <Analytics />
             </main>
             <Footer />
           </div>
         </ThemeProvider>
+        
+        {/* Netlify Identity Redirect Handler */}
+        <Script id="netlify-identity-redirect" strategy="afterInteractive">
+          {`
+            if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                  window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+                }
+              });
+            }
+          `}
+        </Script>
       </body>
     </html>
   );
