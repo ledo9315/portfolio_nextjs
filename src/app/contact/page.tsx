@@ -1,0 +1,268 @@
+"use client";
+
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useState } from "react";
+import { LoaderCircle } from "lucide-react";
+
+interface Props {
+  className?: string;
+}
+
+interface Inputs {
+  firstName: string;
+  lastName: string;
+  email: string;
+  message: string;
+}
+
+export default function ContactPage({ className }: Props) {
+  const [showToast, setShowToast] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<Inputs>({ mode: "onSubmit" });
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "ea0f4ee1-6ab8-4cd7-8945-e7f52e5246f8",
+          name: `${data.firstName} ${data.lastName}`,
+          email: data.email,
+          message: data.message,
+        }),
+      });
+
+      if (response.ok) {
+        setShowToast(true);
+        reset();
+        setTimeout(() => setShowToast(false), 5000);
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
+  return (
+    <main className="min-h-screen" role="main" aria-labelledby="contact-title">
+      <section className="contact py-0 md:py-0" aria-labelledby="contact-title">
+        <h1 id="contact-title" className="sr-only">
+          Kontaktformular
+        </h1>
+        <div className="container mx-auto px-4 md:px-16 lg:px-32 max-w-7xl">
+          <div className="grid min-h-screen md:min-h-[calc(100vh-70px)]">
+            <article className="contact__form-wrapper grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-24 lg:gap-36 py-12 md:py-0">
+              <aside className="contact__info-section order-1 md:order-1 self-center max-w-2xl mt-12 md:mt-0">
+                <h2 className="font-hanson contact__info-title text-3xl md:text-4xl font-bold uppercase mb-5 leading-tight">
+                  Lass uns über <span className="text-purple">Projekte</span>{" "}
+                  sprechen
+                </h2>
+                <p className="contact__info-text mb-8 text-base md:text-lg leading-relaxed">
+                  Ich bin gespannt auf deine Ideen und freue mich darauf, mit
+                  dir zusammenzuarbeiten. Schreib mir einfach eine Nachricht und
+                  ich melde mich bei dir.
+                </p>
+              </aside>
+
+              {/* Form Section */}
+              <div className="contact__form-section order-2 md:order-2 self-center max-w-2xl">
+                <h2 className="sr-only">Schreib mir eine Nachricht</h2>
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="contact__form grid gap-3"
+                  id="contactForm"
+                  role="form"
+                  aria-label="Kontaktformular"
+                >
+                  <div className="contact__name-wrapper grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5">
+                    <div className="contact__form-group flex flex-col mb-5 group">
+                      <label
+                        htmlFor="first-name"
+                        className="mb-1 text-base text-white/60 transition-colors duration-200 group-focus-within:text-purple"
+                      >
+                        Vorname
+                      </label>
+                      <input
+                        {...register("firstName", {
+                          required: "Vorname ist erforderlich",
+                          minLength: {
+                            value: 2,
+                            message:
+                              "Vorname muss mindestens 2 Zeichen lang sein",
+                          },
+                          maxLength: {
+                            value: 15,
+                            message:
+                              "Vorname darf maximal 15 Zeichen lang sein",
+                          },
+                        })}
+                        id="first-name"
+                        type="text"
+                        className="p-1 text-base bg-transparent border-0 border-b border-white/30 focus:outline-none transition-colors group-focus-within:border-purple"
+                        aria-describedby={
+                          errors.firstName ? "first-name-error" : undefined
+                        }
+                      />
+                      {errors.firstName && (
+                        <span
+                          id="first-name-error"
+                          className="text-red-400 text-sm mt-1"
+                          role="alert"
+                        >
+                          {errors.firstName.message}
+                        </span>
+                      )}
+                    </div>
+                    <div className="contact__form-group flex flex-col mb-5 group">
+                      <label
+                        htmlFor="last-name"
+                        className="mb-1 text-base text-white/60 transition-colors duration-200 group-focus-within:text-purple"
+                      >
+                        Nachname
+                      </label>
+                      <input
+                        {...register("lastName", {
+                          required: "Nachname ist erforderlich",
+                          minLength: {
+                            value: 2,
+                            message:
+                              "Nachname muss mindestens 2 Zeichen lang sein",
+                          },
+                          maxLength: {
+                            value: 15,
+                            message:
+                              "Nachname darf maximal 15 Zeichen lang sein",
+                          },
+                        })}
+                        id="last-name"
+                        type="text"
+                        className="p-1 text-base bg-transparent border-0 border-b border-white/30 focus:outline-none transition-colors group-focus-within:border-purple"
+                        aria-describedby={
+                          errors.lastName ? "last-name-error" : undefined
+                        }
+                      />
+                      {errors.lastName && (
+                        <span
+                          id="last-name-error"
+                          className="text-red-400 text-sm mt-1"
+                          role="alert"
+                        >
+                          {errors.lastName.message}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="contact__form-group flex flex-col mb-5 group">
+                    <label
+                      htmlFor="email"
+                      className="mb-1 text-base text-white/60 transition-colors duration-200 group-focus-within:text-purple"
+                    >
+                      Email
+                    </label>
+                    <input
+                      {...register("email", {
+                        required: "E-Mail ist erforderlich",
+                        pattern: {
+                          value:
+                            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                          message: "Bitte gib eine gültige E-Mail-Adresse ein",
+                        },
+                      })}
+                      id="email"
+                      type="email"
+                      className="p-1 text-base bg-transparent border-0 border-b border-white/30 focus:outline-none transition-colors group-focus-within:border-purple"
+                      aria-describedby={
+                        errors.email ? "email-error" : undefined
+                      }
+                    />
+                    {errors.email && (
+                      <span
+                        id="email-error"
+                        className="text-red-400 text-sm mt-1"
+                        role="alert"
+                      >
+                        {errors.email.message}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="contact__form-group flex flex-col mb-5 group">
+                    <label
+                      htmlFor="message"
+                      className="mb-1 text-base text-white/60 transition-colors duration-200 group-focus-within:text-purple"
+                    >
+                      Deine Nachricht
+                    </label>
+                    <textarea
+                      {...register("message", {
+                        required: "Nachricht ist erforderlich",
+                        minLength: {
+                          value: 10,
+                          message:
+                            "Nachricht muss mindestens 10 Zeichen lang sein",
+                        },
+                        maxLength: {
+                          value: 500,
+                          message:
+                            "Nachricht darf maximal 500 Zeichen lang sein",
+                        },
+                      })}
+                      id="message"
+                      rows={5}
+                      className="p-1 text-base bg-transparent border-0 border-b border-white/30 focus:outline-none transition-colors group-focus-within:border-purple"
+                      aria-describedby={
+                        errors.message ? "message-error" : undefined
+                      }
+                    />
+                    {errors.message && (
+                      <span
+                        id="message-error"
+                        className="text-red-400 text-sm mt-1"
+                        role="alert"
+                      >
+                        {errors.message.message}
+                      </span>
+                    )}
+                  </div>
+
+                  <button
+                    disabled={isSubmitting}
+                    type="submit"
+                    className="flex justify-center items-center bg-purple rounded-sm px-5 py-2 font-bold text-sm border-0 cursor-pointer transition-all duration-300 w-44 mb-20 md:mb-0 hover:bg-purple/90 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <LoaderCircle className="animate-spin" />
+                    ) : (
+                      "Senden"
+                    )}
+                  </button>
+                </form>
+
+                {/* Toast Notification */}
+                {showToast && (
+                  <div
+                    className="toast bg-green-600 fixed bottom-5 right-5 px-4 py-3 rounded z-50 transition-opacity duration-500"
+                    role="alert"
+                    aria-live="polite"
+                  >
+                    <p>Danke! Deine Nachricht wurde erfolgreich gesendet.</p>
+                  </div>
+                )}
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
