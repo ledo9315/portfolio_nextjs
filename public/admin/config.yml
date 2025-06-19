@@ -1,10 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ledo9315/portfolio-nextjs
   branch: main
-
-# Für lokale Entwicklung (temporär):
-# backend:
-#   name: test-repo
+  # Optional: Wenn Sie Client ID/Secret verwenden möchten
+  auth_endpoint: https://portfolio-nextjs-bice-six.vercel.app/api/auth
 
 media_folder: "public/img/projects"
 public_folder: "/img/projects"
