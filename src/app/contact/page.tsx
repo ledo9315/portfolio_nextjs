@@ -4,10 +4,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import { LoaderCircle } from "lucide-react";
 
-interface Props {
-  className?: string;
-}
-
 interface Inputs {
   firstName: string;
   lastName: string;
@@ -15,7 +11,7 @@ interface Inputs {
   message: string;
 }
 
-export default function ContactPage({ className }: Props) {
+export default function ContactPage() {
   const [showToast, setShowToast] = useState(false);
 
   const {
