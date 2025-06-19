@@ -1,7 +1,39 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { getProjectBySlug } from "@/lib/content";
+import { getProjectBySlug, getAllProjectSlugs } from "@/lib/content";
+import { Metadata } from "next";
 import DOMPurify from "isomorphic-dompurify";
+
+// Static generation für alle Projekt-Slugs
+export async function generateStaticParams() {
+  const slugs = await getAllProjectSlugs();
+
+  return slugs.map((slug) => ({
+    slug: slug,
+  }));
+}
+
+// Dynamic metadata für jede Seite
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = await getProjectBySlug(slug);
+
+  if (!project) {
+    return {
+      title: "Projekt nicht gefunden",
+    };
+  }
+
+  return {
+    title: `${project.title} | Leonid Domahalskyy Portfolio`,
+    description: project.description,
+    keywords: project.keywords,
+  };
+}
 
 export default async function ProjectDetailPage({
   params,
