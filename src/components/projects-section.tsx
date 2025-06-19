@@ -1,26 +1,10 @@
+import { getAllProjects } from "@/lib/content";
 import Image from "next/image";
 import Link from "next/link";
 
-const projects = [
-  {
-    id: "metropol",
-    title: "Metropol-Theater",
-    subtitle: "Fullstack-Webseite",
-    image: "/img/project-metropol/Frame-1.webp",
-    alt: "Screenshot des Metropol-Theater-Projekts, das die Website zeigt",
-    href: "/projects/metropol",
-  },
-  {
-    id: "angeles-dance-academy",
-    title: "Angeles Dance Academy",
-    subtitle: "UI Design / Webseite",
-    image: "/img/project-angelas-dance-academy/Frame-1.webp",
-    alt: "Screenshot der Website der Angela's Dance Academy, dargestellt auf einem Laptop",
-    href: "/projects/angelas-dance-academy",
-  },
-];
+export async function ProjectsSection() {
+  const projects = await getAllProjects();
 
-export function ProjectsSection() {
   return (
     <section
       className="relative"
@@ -37,14 +21,14 @@ export function ProjectsSection() {
       <ul className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-16">
         {projects.map((project) => (
           <li
-            key={project.id}
+            key={project.slug}
             className="justify-self-center cursor-pointer relative overflow-hidden group"
           >
             <figure>
-              <Link href={project.href}>
+              <Link href={`/projects/${project.slug}`}>
                 <Image
-                  src={project.image}
-                  alt={project.alt}
+                  src={project.images.frames[0].src}
+                  alt={project.images.frames[0].alt}
                   className="block border border-white/26 rounded transition-opacity duration-300 ease-out group-hover:opacity-30"
                   width={800}
                   height={600}
@@ -54,7 +38,7 @@ export function ProjectsSection() {
                 <div className="absolute top-5 left-5 opacity-0 text-[1.2rem] leading-[1.1] transition-all duration-300 ease-out translate-y-1/2 group-hover:opacity-100 group-hover:translate-y-0">
                   {project.title} <br />
                   <span className="text-xs text-[var(--light-grey)] uppercase">
-                    {project.subtitle}
+                    {project.description}
                   </span>
                 </div>
 

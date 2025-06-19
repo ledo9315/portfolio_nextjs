@@ -40,7 +40,7 @@ export default function AboutPage() {
               >
                 <p
                   id="about-description"
-                  className="text-lg md:text-xl leading-relaxed mb-6 font-light"
+                  className="text-lg md:text-xl leading-relaxed mb-6"
                 >
                   Ich bin ein passionierter Programmierer aus Flensburg im
                   Norden Deutschlands. Mein Wissen in der Softwareentwicklung

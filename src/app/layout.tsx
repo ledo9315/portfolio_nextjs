@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import "./globals.css";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

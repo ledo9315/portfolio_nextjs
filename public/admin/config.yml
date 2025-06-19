@@ -1,0 +1,74 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Für lokale Entwicklung (temporär):
+# backend:
+#   name: test-repo
+
+media_folder: "public/img/projects"
+public_folder: "/img/projects"
+
+collections:
+  - name: "projects"
+    label: "Projekte"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - label: "Titel"
+        name: "title"
+        widget: "string"
+        required: true
+
+      - label: "Beschreibung"
+        name: "description"
+        widget: "text"
+        required: true
+
+      - label: "Keywords"
+        name: "keywords"
+        widget: "string"
+        required: true
+        hint: "z.B. HTML, CSS, JavaScript"
+
+      - label: "Website URL"
+        name: "websiteUrl"
+        widget: "string"
+        required: true
+        default: "#"
+
+      - label: "Link Text"
+        name: "linkText"
+        widget: "string"
+        required: true
+        default: "Link zur Webseite"
+
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "image"
+        required: true
+        hint: "Hauptbild des Projekts"
+
+      - label: "Projekt Bilder"
+        name: "frames"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Bild"
+            name: "src"
+            widget: "image"
+            required: true
+          - label: "Alt Text"
+            name: "alt"
+            widget: "string"
+            required: true
+            hint: "Beschreibung des Bildes für Barrierefreiheit"
+
+      - label: "Inhalt"
+        name: "body"
+        widget: "markdown"
+        required: true
+        hint: "Detaillierte Projektbeschreibung"
