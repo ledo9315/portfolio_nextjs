@@ -115,7 +115,9 @@ export async function getAllProjects(): Promise<Project[]> {
   );
 
   // Null-Werte herausfiltern
-  return allProjectsData.filter((project): project is Project => project !== null);
+  return allProjectsData.filter(
+    (project): project is Project => project !== null
+  );
 }
 
 // 🧾 Gibt alle Slugs (Dateinamen ohne ".md") der vorhandenen Projekte zurück

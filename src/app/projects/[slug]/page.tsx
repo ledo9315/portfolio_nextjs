@@ -98,21 +98,6 @@ export default async function ProjectDetailPage({
         </h2>
         <div className="container mx-auto px-4 md:px-16 lg:px-32 max-w-7xl">
           <div className="project-images__wrapper grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-            {/* Thumbnail - spans full width */}
-            {project.images.thumbnail && (
-              <div className="col-span-1 md:col-span-2">
-                <Image
-                  src={project.images.thumbnail}
-                  alt={`${project.title} Hauptbild`}
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto border"
-                  priority
-                />
-              </div>
-            )}
-
-            {/* Project Video - spans full width if available */}
             {project.video && (
               <div className="col-span-1 md:col-span-2">
                 <video
@@ -143,6 +128,20 @@ export default async function ProjectDetailPage({
                     {project.video.title}
                   </p>
                 )}
+              </div>
+            )}
+
+            {/* Thumbnail - spans full width */}
+            {project.images.thumbnail && (
+              <div className="col-span-1 md:col-span-2">
+                <Image
+                  src={project.images.thumbnail}
+                  alt={`${project.title} Hauptbild`}
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto border"
+                  priority
+                />
               </div>
             )}
 
