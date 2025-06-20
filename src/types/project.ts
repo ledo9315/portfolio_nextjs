@@ -7,7 +7,7 @@ interface Project {
   websiteUrl: string;
   linkText: string;
   images: {
-    thumbnail?: string;
+    thumbnail: string;
     frames: {
       src: string;
       alt: string;
