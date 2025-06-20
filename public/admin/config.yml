@@ -48,6 +48,31 @@ collections:
         required: true
         hint: "Hauptbild des Projekts"
 
+      - label: "Projekt Video"
+        name: "video"
+        widget: "object"
+        required: false
+        hint: "Optional: Video-Demonstration des Projekts"
+        fields:
+          - label: "Video Datei"
+            name: "src"
+            widget: "file"
+            required: true
+            media_library:
+              config:
+                multiple: false
+            hint: "MP4, WebM oder andere Video-Formate"
+          - label: "Video Poster (Vorschaubild)"
+            name: "poster"
+            widget: "image"
+            required: false
+            hint: "Bild das vor Video-Start gezeigt wird"
+          - label: "Video Titel"
+            name: "title"
+            widget: "string"
+            required: false
+            hint: "Beschreibung für Barrierefreiheit"
+
       - label: "Projekt Bilder"
         name: "frames"
         widget: "list"

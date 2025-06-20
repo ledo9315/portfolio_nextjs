@@ -94,12 +94,11 @@ export default async function ProjectDetailPage({
         aria-labelledby="project-gallery-title"
       >
         <h2 id="project-gallery-title" className="sr-only">
-          Bilder Galerie
+          Bilder und Video Galerie
         </h2>
         <div className="container mx-auto px-4 md:px-16 lg:px-32 max-w-7xl">
           <div className="project-images__wrapper grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
             {/* Thumbnail - spans full width */}
-
             {project.images.thumbnail && (
               <div className="col-span-1 md:col-span-2">
                 <Image
@@ -110,6 +109,40 @@ export default async function ProjectDetailPage({
                   className="w-full h-auto border"
                   priority
                 />
+              </div>
+            )}
+
+            {/* Project Video - spans full width if available */}
+            {project.video && (
+              <div className="col-span-1 md:col-span-2">
+                <video
+                  controls
+                  className="w-full h-auto border rounded"
+                  poster={project.video.poster || undefined}
+                  preload="metadata"
+                  aria-label={
+                    project.video.title ||
+                    `${project.title} Video-Demonstration`
+                  }
+                >
+                  <source src={project.video.src} type="video/mp4" />
+                  <source src={project.video.src} type="video/webm" />
+                  <p className="text-white/70 p-4">
+                    Ihr Browser unterstützt das Video-Element nicht.{" "}
+                    <a
+                      href={project.video.src}
+                      className="text-purple hover:underline"
+                      download
+                    >
+                      Video herunterladen
+                    </a>
+                  </p>
+                </video>
+                {project.video.title && (
+                  <p className="text-sm text-white/60 mt-2 italic">
+                    {project.video.title}
+                  </p>
+                )}
               </div>
             )}
 

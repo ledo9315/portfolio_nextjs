@@ -30,16 +30,23 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
     // Einzelnes Projekt-Objekt zurückgeben
     return {
       slug,
-      title: data.title,
-      description: data.description,
-      keywords: data.keywords,
-      websiteUrl: data.websiteUrl,
-      linkText: data.linkText,
+      title: data.title || "Untitled",
+      description: data.description || "",
+      keywords: data.keywords || "",
+      websiteUrl: data.websiteUrl || "#",
+      linkText: data.linkText || "Link zur Webseite",
       text: contentHtml,
       images: {
-        thumbnail: data.thumbnail,
+        thumbnail: data.thumbnail || null,
         frames: data.frames || [],
       },
+      video: data.video
+        ? {
+            src: data.video.src,
+            poster: data.video.poster || null,
+            title: data.video.title || null,
+          }
+        : null,
     } as Project;
   } catch (error) {
     console.error(`Fehler beim Laden von Projekt "${slug}":`, error);
@@ -48,6 +55,12 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
 }
 
 export async function getAllProjects(): Promise<Project[]> {
+  // Prüfen ob Verzeichnis existiert
+  if (!fs.existsSync(projectsDirectory)) {
+    console.warn("Projects directory does not exist:", projectsDirectory);
+    return [];
+  }
+
   const fileNames = fs.readdirSync(projectsDirectory);
 
   // Verarbeitet jede Markdown-Datei und wandelt sie in ein `Project`-Objekt um
@@ -62,37 +75,47 @@ export async function getAllProjects(): Promise<Project[]> {
         // Absoluter Pfad zur Datei (z. B. /users/.../src/content/projects/projekt1.md)
         const fullPath = path.join(projectsDirectory, fileName);
 
-        // Liest den Inhalt der Datei als UTF-8-Text
-        const fileContents = fs.readFileSync(fullPath, "utf8");
+        try {
+          // Liest den Inhalt der Datei als UTF-8-Text
+          const fileContents = fs.readFileSync(fullPath, "utf8");
 
-        // Zerlegt die Datei in `data` (Frontmatter) und `content` (Markdown-Inhalt)
-        const { data, content } = matter(fileContents);
+          // Zerlegt die Datei in `data` (Frontmatter) und `content` (Markdown-Inhalt)
+          const { data, content } = matter(fileContents);
 
-        // Wandelt den Markdown-Inhalt in HTML um
-        const processedContent = await remark().use(html).process(content);
-        const contentHtml = processedContent.toString();
+          // Wandelt den Markdown-Inhalt in HTML um
+          const processedContent = await remark().use(html).process(content);
+          const contentHtml = processedContent.toString();
 
-        // Gibt das Projekt-Objekt zurück (passend zum `Project`-Typ)
-        return {
-          slug,
-          title: data.title,
-          description: data.description,
-          keywords: data.keywords,
-          websiteUrl: data.websiteUrl,
-          linkText: data.linkText,
-          text: contentHtml, // der HTML-Inhalt des Markdown-Texts
-          images: {
-            thumbnail: data.thumbnail, // Pfad oder URL zum Vorschaubild
-            frames: data.frames || [], // optionales Array mit weiteren Bildern
-          },
-        } as Project;
+          // Gibt das Projekt-Objekt zurück (passend zum `Project`-Typ)
+          return {
+            slug,
+            title: data.title || "Untitled",
+            description: data.description || "",
+            keywords: data.keywords || "",
+            websiteUrl: data.websiteUrl || "#",
+            linkText: data.linkText || "Link zur Webseite",
+            text: contentHtml, // der HTML-Inhalt des Markdown-Texts
+            images: {
+              thumbnail: data.thumbnail || null, // Pfad oder URL zum Vorschaubild
+              frames: data.frames || [], // optionales Array mit weiteren Bildern
+            },
+            video: data.video
+              ? {
+                  src: data.video.src,
+                  poster: data.video.poster || null,
+                  title: data.video.title || null,
+                }
+              : null,
+          } as Project;
+        } catch (error) {
+          console.error(`Error processing ${fileName}:`, error);
+          return null;
+        }
       })
   );
 
-  // Gibt alle verarbeiteten Projekte zurück
-  return allProjectsData.filter(
-    (project): project is Project => project !== null
-  );
+  // Null-Werte herausfiltern
+  return allProjectsData.filter((project): project is Project => project !== null);
 }
 
 // 🧾 Gibt alle Slugs (Dateinamen ohne ".md") der vorhandenen Projekte zurück

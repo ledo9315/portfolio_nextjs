@@ -1,10 +1,14 @@
 ---
 title: "Metropol Theater"
 description: "Webseite, Branding, Kino-Design"
-keywords: "Deno, Oak, SQLite, Nunjucks"
+keywords: "HTML, CSS, Kino Design"
 websiteUrl: "#"
 linkText: "Link zur Webseite"
 thumbnail: "/img/project-metropol/Frame-1.webp"
+video:
+  src: "/videos/projects/metropol-demo.mp4"
+  poster: "/img/project-metropol/Frame-1.webp"
+  title: "Interaktive Demo des Metropol Theater Websites"
 frames:
   - src: "/img/project-metropol/Frame-2.webp"
     alt: "Metropol Theater Homepage"
