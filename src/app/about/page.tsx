@@ -31,7 +31,7 @@ export default function AboutPage() {
                 className="text-4xl md:text-5xl font-hanson font-bold uppercase mb-10 leading-tight tracking-tight"
                 aria-label="Über mich"
               >
-                Moin!
+                Wer ich bin
               </h1>
               <div
                 className="text-content max-w-3xl"
@@ -40,7 +40,7 @@ export default function AboutPage() {
               >
                 <p
                   id="about-description"
-                  className="text-lg md:text-xl leading-relaxed mb-6 font-light"
+                  className="text-lg leading-relaxed mb-6"
                 >
                   Ich bin ein passionierter Programmierer aus Flensburg im
                   Norden Deutschlands. Mein Wissen in der Softwareentwicklung
@@ -54,7 +54,7 @@ export default function AboutPage() {
                   </span>{" "}
                   an der Hochschule Flensburg erworben.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed mb-6">
+                <p className="text-lg leading-relaxed mb-6">
                   Ich habe eine besondere Leidenschaft für die Entwicklung von
                   Webanwendungen, insbesondere im Bereich{" "}
                   <span
@@ -73,7 +73,7 @@ export default function AboutPage() {
                   . Mir ist es wichtig, dass Lösungen nicht nur funktional,
                   sondern auch benutzerfreundlich sind.
                 </p>
-                <p className="text-lg md:text-xl leading-relaxed mb-6">
+                <p className="text-lg leading-relaxed mb-6">
                   Ich halte mich stets über die neuesten Technologien auf dem
                   Laufenden, um sicherzustellen, dass meine Fähigkeiten den
                   aktuellen Anforderungen entsprechen.
@@ -100,7 +100,7 @@ export default function AboutPage() {
               Mein Tech Stack
             </h2>
             <p
-              className="text-lg md:text-xl mb-16"
+              className="text-lg md:text-xl mb-16 text-white/60 font-medium"
               aria-describedby="tech-stack-description"
             >
               <span id="tech-stack-description">

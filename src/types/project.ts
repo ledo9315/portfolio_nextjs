@@ -4,10 +4,11 @@ interface Project {
   description: string;
   text: string;
   keywords: string;
-  websiteUrl: string;
+  websiteUrl?: string;
   linkText: string;
   images: {
-    thumbnail: string;
+    thumbnail?: string;
+    cover: string;
     frames: {
       src: string;
       alt: string;

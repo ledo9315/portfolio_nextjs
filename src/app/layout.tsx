@@ -138,12 +138,36 @@ export default function RootLayout({
           sizes="16x16"
           href="/favicon-16x16.png"
         />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/android-chrome-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="/android-chrome-512x512.png"
+        />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#a196df" />
+        <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
+        <meta name="theme-color" content="#a196df" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a196df" />
         <link rel="canonical" href="https://www.leonid-domahalskyy.de" />
 
         {/* DNS Prefetch for external resources */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+        {/* Preconnect for faster loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
 
         {/* Preload critical resources */}
         <link
@@ -153,7 +177,15 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin=""
         />
+        <link
+          rel="preload"
+          href="/fonts/Montserrat-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
         <link rel="preload" href="/video/bg-video.mp4" as="video" />
+        <link rel="preload" href="/img/fallback-image.webp" as="image" />
 
         {/* Structured Data */}
         <script

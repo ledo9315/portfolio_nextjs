@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.leonid-domahalskyy.de/sitemap.xml
+
+# Crawl-delay für bessere Server-Performance
+Crawl-delay: 1
+
+# Spezifische Regeln für wichtige Bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

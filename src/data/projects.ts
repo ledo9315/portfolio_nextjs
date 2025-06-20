@@ -11,6 +11,7 @@ const projects: Project[] = [
     linkText: "Link zur Webseite",
     images: {
       thumbnail: "/img/project-angelas-dance-academy/thumbnail.webp",
+      cover: "/img/project-angelas-dance-academy/Frame-1.webp",
       frames: [
         {
           src: "/img/project-angelas-dance-academy/Frame-1.webp",
@@ -36,12 +37,13 @@ const projects: Project[] = [
     slug: "metropol",
     title: "Metropol Theater",
     description: "Webseite, Branding, Kino-Design",
-    text: "Ein elegantes Webdesign für das Metropol Theater, das die gehobene Küche und das stilvolle Ambiente widerspiegelt. Das Design betont die kulinarische Exzellenz und schafft eine einladende Online-Präsenz.",
+    text: "Im Studium habe ich im Rahmen des Moduls «WWW-Programmierung» eine Fullstack-Webseite für das Metropol-Theater entwickelt. Die Webseite bietet einen Überblick über aktuelle und kommende Filme, Vorstellungszeiten sowie Informationen zum Kino selbst. Zudem verfügt sie über einen Dashboard-Bereich, der es ermöglicht, Filme zu verwalten und das Programm effizient zu aktualisieren.",
     keywords: "HTML, CSS, Kino Design",
     websiteUrl: "#",
     linkText: "Link zur Webseite",
     images: {
-      thumbnail: "/img/project-metropol/Frame-1.webp",
+      thumbnail: "/img/project-metropol/thumbnail.webp",
+      cover: "/img/project-metropol/thumbnail.webp",
       frames: [
         {
           src: "/img/project-metropol/Frame-2.webp",

@@ -7,7 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "build:analyze": "ANALYZE=true next build",
+    "preview": "next build && next start",
+    "clean": "rm -rf .next out",
+    "check-all": "npm run type-check && npm run lint"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.10",
@@ -23,6 +28,7 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^15.3.4",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.17",

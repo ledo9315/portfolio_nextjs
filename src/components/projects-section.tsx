@@ -25,7 +25,7 @@ export function ProjectsSection() {
             <figure>
               <Link href={`/projects/${project.slug}`}>
                 <Image
-                  src={project.images.thumbnail}
+                  src={project.images.cover}
                   alt={`Screenshot von ${project.title}`}
                   className="block border border-white/26 rounded transition-opacity duration-300 ease-out group-hover:opacity-30"
                   width={800}
