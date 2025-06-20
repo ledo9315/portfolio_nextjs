@@ -3,7 +3,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import { LoaderCircle } from "lucide-react";
-import { Metadata } from "next";
 
 interface Inputs {
   firstName: string;
@@ -11,12 +10,6 @@ interface Inputs {
   email: string;
   message: string;
 }
-
-export const metadata: Metadata = {
-  title: "Kontakt - Leonid Domahalskyy",
-  description:
-    "Kontaktiere Leonid Domahalskyy für deine Webentwicklungs- und UI/UX Design-Projekte",
-};
 
 export default function ContactPage() {
   const [showToast, setShowToast] = useState(false);
