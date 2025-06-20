@@ -6,7 +6,7 @@ interface TechCategoryProps {
   technologies: Technology[];
 }
 
-function TechCategory({ title, icon, technologies }: TechCategoryProps) {
+export function TechCategory({ title, icon, technologies }: TechCategoryProps) {
   const getTechItemStyle = (type: Technology["type"]) => {
     switch (type) {
       case "expert":
@@ -82,5 +82,3 @@ function TechCategory({ title, icon, technologies }: TechCategoryProps) {
     </div>
   );
 }
-
-export default TechCategory;
