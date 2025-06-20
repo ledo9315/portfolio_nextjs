@@ -123,7 +123,7 @@ export default function RootLayout({
     <html lang="de" suppressHydrationWarning>
       <head>
         {/* Netlify Identity Widget für CMS */}
-        <Script 
+        <Script
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
           strategy="beforeInteractive"
         />
@@ -192,7 +192,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
-        
+
         {/* Netlify Identity Redirect Handler */}
         <Script id="netlify-identity-redirect" strategy="afterInteractive">
           {`
