@@ -3,10 +3,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import { LoaderCircle } from "lucide-react";
-
-interface Props {
-  className?: string;
-}
+import { Metadata } from "next";
 
 interface Inputs {
   firstName: string;
@@ -15,7 +12,13 @@ interface Inputs {
   message: string;
 }
 
-export default function ContactPage({ className }: Props) {
+export const metadata: Metadata = {
+  title: "Kontakt - Leonid Domahalskyy",
+  description:
+    "Kontaktiere Leonid Domahalskyy für deine Webentwicklungs- und UI/UX Design-Projekte",
+};
+
+export default function ContactPage() {
   const [showToast, setShowToast] = useState(false);
 
   const {

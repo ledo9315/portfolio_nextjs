@@ -42,14 +42,16 @@ export default function ProjectDetailPage({
             {project.description}
           </p>
           <div className="flex flex-wrap gap-2 mb-6">
-            {project.keywords.split(", ").map((keyword: string, index: number) => (
-              <span
-                key={index}
-                className="px-3 py-1 bg-[var(--accent-color)] text-[var(--bg-color)] rounded-full text-sm"
-              >
-                {keyword}
-              </span>
-            ))}
+            {project.keywords
+              .split(", ")
+              .map((keyword: string, index: number) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-[var(--accent-color)] text-[var(--bg-color)] rounded-full text-sm"
+                >
+                  {keyword}
+                </span>
+              ))}
           </div>
           {project.websiteUrl && project.websiteUrl !== "#" && (
             <Link
@@ -71,26 +73,26 @@ export default function ProjectDetailPage({
 
         {/* Project Images */}
         <div className="space-y-8">
-          {project.images.frames.map((frame: { src: string; alt: string }, index: number) => (
-            <div key={index} className="relative">
-              <Image
-                src={frame.src}
-                alt={frame.alt}
-                width={1200}
-                height={800}
-                className="w-full rounded-lg border border-white/10"
-                quality={90}
-                priority={index === 0}
-              />
-            </div>
-          ))}
+          {project.images.frames.map(
+            (frame: { src: string; alt: string }, index: number) => (
+              <div key={index} className="relative">
+                <Image
+                  src={frame.src}
+                  alt={frame.alt}
+                  width={1200}
+                  height={800}
+                  className="w-full rounded-lg border border-white/10"
+                  quality={90}
+                  priority={index === 0}
+                />
+              </div>
+            )
+          )}
         </div>
 
         {/* Navigation to next/previous projects */}
         <div className="flex justify-between items-center mt-16 pt-8 border-t border-white/10">
-          <div>
-            {/* Add previous project navigation if needed */}
-          </div>
+          <div>{/* Add previous project navigation if needed */}</div>
           <Link
             href="/#projects"
             className="text-[var(--accent-color)] hover:underline"

@@ -1,4 +1,4 @@
-import TechCategory from "@/components/tech-category";
+import { TechCategory } from "@/components/tech-category";
 import {
   Box,
   Database,
