@@ -7,8 +7,8 @@ linkText: Link zur Webseite
 thumbnail: /img/project-metropol/Frame-1.webp
 video:
   src: ""
-  poster: /img/project-metropol/Frame-1.webp
-  title: Interaktive Demo des Metropol Theater Websites
+  poster: ""
+  title: ""
 frames:
   - src: /img/project-metropol/Frame-2.webp
     alt: Metropol Theater Homepage
