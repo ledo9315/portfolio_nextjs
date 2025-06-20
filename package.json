@@ -1,13 +1,18 @@
 {
   "name": "leonid-portfolio-nextjs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "analyze": "cross-env ANALYZE=true next build",
+    "build:production": "npm run lint && npm run type-check && next build",
+    "test:lighthouse": "lhci autorun",
+    "clean": "rm -rf .next out"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.10",

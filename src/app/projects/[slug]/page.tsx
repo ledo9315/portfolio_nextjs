@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/content";
 import { Metadata } from "next";
 import DOMPurify from "isomorphic-dompurify";
+import Link from "next/link";
 
 // Static generation für alle Projekt-Slugs
 export async function generateStaticParams() {
@@ -149,13 +150,15 @@ export default async function ProjectDetailPage({
             {/* Project frames */}
             {project.images.frames.map((frame, index) => (
               <div key={index}>
-                <Image
-                  src={frame.src}
-                  alt={frame.alt}
-                  width={600}
-                  height={400}
-                  className="w-full h-auto border"
-                />
+                <Link href={`/projects/${project.slug}/frames/${index + 1}/`}>
+                  <Image
+                    src={frame.src}
+                    alt={frame.alt}
+                    width={600}
+                    height={400}
+                    className="w-full h-auto border"
+                  />
+                </Link>
               </div>
             ))}
           </div>

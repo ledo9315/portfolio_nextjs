@@ -1,6 +1,22 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { ProjectsSection } from "@/components/projects-section";
+import { Suspense } from "react";
+
+// Loading Skeleton für Projekte
+function ProjectsSkeleton() {
+  return (
+    <div className="grid gap-8 md:gap-12">
+      {[1, 2, 3].map((i) => (
+        <div key={i} className="animate-pulse">
+          <div className="bg-gray-800 rounded-lg h-64 mb-4"></div>
+          <div className="bg-gray-700 h-6 rounded mb-2"></div>
+          <div className="bg-gray-700 h-4 rounded w-3/4"></div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -12,36 +28,40 @@ export default function HomePage() {
           role="banner"
         >
           <div className="container grid items-center h-full pt-[70px]">
+            {/* Optimiertes Video mit besserer Performance */}
             <video
               className="absolute top-0 left-0 w-full h-screen object-cover -z-10"
               autoPlay
               muted
               loop
               playsInline
+              preload="metadata"
               aria-hidden="true"
               poster="/img/fallback-image.webp"
             >
-              <source src="/video/bg-video.mp4" type="video/mp4" />
+              <source src="/videos/bg-video.mp4" type="video/mp4" />
+              {/* Fallback Image mit Next.js Optimierung */}
               <Image
                 src="/img/fallback-image.webp"
                 alt=""
-                width={1920}
-                height={1080}
+                fill
                 priority
-                className="absolute top-0 left-0 w-full h-screen object-cover"
+                className="object-cover"
+                sizes="100vw"
+                quality={85}
               />
             </video>
 
-            {/* Light theme overlay for better text contrast */}
+            {/* Optimiertes Overlay */}
             <div
-              className="absolute top-0 left-0 w-full h-screen bg-black/20 dark:bg-black/20 light:bg-white/30 -z-[5]"
+              className="absolute top-0 left-0 w-full h-screen bg-black/20 -z-[5]"
               aria-hidden="true"
-            ></div>
+            />
 
             <div className="self-end">
               <h1
                 id="hero-heading"
-                className="font-hanson text-[2.5rem] sm:text-[4.2rem] leading-[1.1] uppercase mb-2.5 text-white dark:text-white light:text-black"
+                className="font-hanson text-[2.5rem] sm:text-[4.2rem] leading-[1.1] uppercase mb-2.5 text-white"
               >
                 Hey
                 <br />
@@ -68,11 +88,11 @@ export default function HomePage() {
 
             <a
               href="#projects"
-              className="self-end justify-self-center flex justify-center items-end mb-8 w-full h-8 focus:outline-none focus:ring-2 focus:ring-portfolio-purple focus:ring-offset-2 focus:ring-offset-transparent rounded"
+              className="self-end justify-self-center flex justify-center items-end mb-8 w-full h-8 focus:outline-none focus:ring-2 focus:ring-purple focus:ring-offset-2 focus:ring-offset-transparent rounded"
               aria-label="Zu den Projekten scrollen"
             >
               <ChevronDown
-                className="cursor-pointer text-white dark:text-white light:text-black w-12 h-12 animate-bounce-arrow"
+                className="cursor-pointer text-white w-12 h-12 animate-bounce-arrow"
                 aria-hidden="true"
               />
               <span className="sr-only">Nach unten scrollen zu Projekte</span>
@@ -80,13 +100,16 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Projects Section mit Suspense für bessere Performance */}
         <section
           className="py-32 lg:py-44 bg-[var(--bg-color)]"
           id="projects"
           aria-labelledby="projects-title"
         >
           <div className="container">
-            <ProjectsSection />
+            <Suspense fallback={<ProjectsSkeleton />}>
+              <ProjectsSection />
+            </Suspense>
           </div>
         </section>
       </main>

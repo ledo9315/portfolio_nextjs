@@ -19,34 +19,52 @@ export async function ProjectsSection() {
       </h2>
 
       <ul className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-16">
-        {projects.map((project) => (
-          <li
-            key={project.slug}
-            className="justify-self-center cursor-pointer relative overflow-hidden group"
-          >
-            <figure>
-              <Link href={`/projects/${project.slug}`}>
-                <Image
-                  src={project.images.frames[0].src}
-                  alt={project.images.frames[0].alt}
-                  className="block border border-white/26 rounded transition-opacity duration-300 ease-out group-hover:opacity-30"
-                  width={800}
-                  height={600}
-                  quality={90}
-                />
+        {projects.map((project) => {
+          // Sichere Ermittlung des Bildes und Alt-Texts
+          const getImageSrc = () => {
+            if (project.slug === "metropol" && project.images.thumbnail) {
+              return project.images.thumbnail;
+            }
+            return (
+              project.images.frames?.[0]?.src || "/img/fallback-image.webp"
+            );
+          };
 
-                <div className="absolute top-5 left-5 opacity-0 text-[1.2rem] leading-[1.1] transition-all duration-300 ease-out translate-y-1/2 group-hover:opacity-100 group-hover:translate-y-0">
-                  {project.title} <br />
-                  <span className="text-xs text-[var(--light-grey)] uppercase">
-                    {project.description}
-                  </span>
-                </div>
+          const getImageAlt = () => {
+            return (
+              project.images.frames?.[0]?.alt || `${project.title} Vorschaubild`
+            );
+          };
 
-                <figcaption className="mt-4">{project.title}</figcaption>
-              </Link>
-            </figure>
-          </li>
-        ))}
+          return (
+            <li
+              key={project.slug}
+              className="justify-self-center cursor-pointer relative overflow-hidden group"
+            >
+              <figure>
+                <Link href={`/projects/${project.slug}`}>
+                  <Image
+                    src={getImageSrc()}
+                    alt={getImageAlt()}
+                    className="block border border-white/26 rounded transition-opacity duration-300 ease-out group-hover:opacity-30"
+                    width={800}
+                    height={600}
+                    quality={90}
+                  />
+
+                  <div className="absolute top-5 left-5 opacity-0 text-[1.2rem] leading-[1.1] transition-all duration-300 ease-out translate-y-1/2 group-hover:opacity-100 group-hover:translate-y-0">
+                    {project.title} <br />
+                    <span className="text-xs text-[var(--light-grey)] uppercase">
+                      {project.description}
+                    </span>
+                  </div>
+
+                  <figcaption className="mt-4">{project.title}</figcaption>
+                </Link>
+              </figure>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

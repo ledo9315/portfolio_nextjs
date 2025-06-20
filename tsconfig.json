@@ -36,7 +36,13 @@
         "./src/types/*"
       ]
     },
-    "target": "ES2017"
+    "target": "ES2017",
+    // Production-optimierte Einstellungen
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true
   },
   "include": [
     "next-env.d.ts",
@@ -45,6 +51,8 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "out"
   ]
 }
