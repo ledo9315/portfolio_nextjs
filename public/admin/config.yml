@@ -57,7 +57,7 @@ collections:
           - label: "Video Datei"
             name: "src"
             widget: "file"
-            required: true
+            required: false
             media_library:
               config:
                 multiple: false
