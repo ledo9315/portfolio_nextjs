@@ -40,13 +40,11 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
         thumbnail: data.thumbnail || null,
         frames: data.frames || [],
       },
-      video: data.video
-        ? {
-            src: data.video.src,
-            poster: data.video.poster || null,
-            title: data.video.title || null,
-          }
-        : null,
+      video: data.video && data.video.src ? {
+              src: data.video.src,
+              poster: data.video.poster || null,
+              title: data.video.title || null,
+            } : null,
     } as Project;
   } catch (error) {
     console.error(`Fehler beim Laden von Projekt "${slug}":`, error);
@@ -99,7 +97,7 @@ export async function getAllProjects(): Promise<Project[]> {
               thumbnail: data.thumbnail || null, // Pfad oder URL zum Vorschaubild
               frames: data.frames || [], // optionales Array mit weiteren Bildern
             },
-            video: data.video
+            video: data.video && data.video.src
               ? {
                   src: data.video.src,
                   poster: data.video.poster || null,

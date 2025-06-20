@@ -98,7 +98,8 @@ export default async function ProjectDetailPage({
         </h2>
         <div className="container mx-auto px-4 md:px-16 lg:px-32 max-w-7xl">
           <div className="project-images__wrapper grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-            {project.video && (
+            {/* Project Video - spans full width if available */}
+            {project.video && project.video.src && (
               <div className="col-span-1 md:col-span-2">
                 <video
                   controls
