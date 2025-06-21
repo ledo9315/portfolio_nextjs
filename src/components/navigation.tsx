@@ -11,6 +11,10 @@ export function Navigation() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="absolute top-0 left-0 right-0 z-50">
       <div className="container grid grid-cols-2 items-center h-[70px] bg-black/20 backdrop-blur-sm">
@@ -33,6 +37,7 @@ export function Navigation() {
         >
           <li className="flex items-center transition-all duration-300 text-4xl lg:text-sm uppercase hover:text-purple active:translate-y-px">
             <Link
+              onClick={closeMenu}
               href="/#main"
               className="whitespace-nowrap block py-2.5 px-5 font-medium text-purple lg:text-white lg:hover:text-purple"
             >
@@ -41,6 +46,7 @@ export function Navigation() {
           </li>
           <li className="flex items-center transition-all duration-300 text-4xl lg:text-sm uppercase hover:text-purple active:translate-y-px">
             <Link
+              onClick={closeMenu}
               href="/about"
               className="whitespace-nowrap block py-2.5 px-5 font-medium hover:text-purple"
             >
@@ -49,6 +55,7 @@ export function Navigation() {
           </li>
           <li className="flex items-center transition-all duration-300 text-4xl lg:text-sm uppercase hover:text-purple active:translate-y-px">
             <Link
+              onClick={closeMenu}
               href="/contact"
               className="whitespace-nowrap block py-2.5 px-5 font-medium hover:text-purple"
             >

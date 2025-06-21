@@ -5,7 +5,7 @@ import projects from "@/data/projects";
 export function ProjectsSection() {
   return (
     <section
-      className="relative"
+      className="relative "
       id="projects"
       aria-labelledby="projects-title"
     >
@@ -27,7 +27,7 @@ export function ProjectsSection() {
                 <Image
                   src={project.images.cover}
                   alt={`Screenshot von ${project.title}`}
-                  className="block border border-white/26 rounded transition-opacity duration-300 ease-out group-hover:opacity-30"
+                  className="block border border-white/26 transition-opacity duration-300 ease-out group-hover:opacity-30"
                   width={800}
                   height={600}
                   quality={90}

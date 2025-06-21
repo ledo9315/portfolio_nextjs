@@ -3,6 +3,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import { LoaderCircle } from "lucide-react";
+import { Button } from "@/components/button";
 
 interface Inputs {
   firstName: string;
@@ -50,7 +51,10 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen" role="main" aria-labelledby="contact-title">
-      <section className="contact py-0 md:py-0" aria-labelledby="contact-title">
+      <section
+        className="contact py-12 md:py-0"
+        aria-labelledby="contact-title"
+      >
         <h1 id="contact-title" className="sr-only">
           Kontaktformular
         </h1>
@@ -231,17 +235,13 @@ export default function ContactPage() {
                     )}
                   </div>
 
-                  <button
-                    disabled={isSubmitting}
-                    type="submit"
-                    className="inline-flex items-center justify-center gap-3 py-3.5 px-6 text-white/80 no-underline rounded bg-white/[0.03] border border-white/[0.173] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] font-medium text-base relative overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:transition-[left] before:duration-600 hover:text-[var(--accent-color)] hover:bg-[rgba(161,150,223,0.15)] hover:border-[rgba(161,150,223,0.3)] hover:-translate-y-[3px] hover:shadow-[0_8px_25px_rgba(161,150,223,0.2),0_4px_12px_rgba(0,0,0,0.1)] hover:before:left-full active:-translate-y-px"
-                  >
+                  <Button disabled={isSubmitting}>
                     {isSubmitting ? (
                       <LoaderCircle className="animate-spin" />
                     ) : (
                       "Senden"
                     )}
-                  </button>
+                  </Button>
                 </form>
 
                 {/* Toast Notification */}

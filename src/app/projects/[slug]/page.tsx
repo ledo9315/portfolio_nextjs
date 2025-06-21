@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import projects from "@/data/projects";
+import { SquareArrowOutUpRight } from "lucide-react";
+import { Button } from "@/components/button";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -24,7 +26,7 @@ export default async function ProjectDetailPage({
   return (
     <main role="main" aria-labelledby="project-title">
       {/* Project Description Section */}
-      <section className="pt-12 md:pt-36">
+      <section className="pt-42">
         <div className="container">
           <div className="max-w-[700px]">
             <h1
@@ -44,14 +46,13 @@ export default async function ProjectDetailPage({
             {/* Website Link */}
             {project.websiteUrl && (
               <aside className="inline-block mt-2.5">
-                <Link
+                <Button
                   href={project.websiteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-base underline border-l-5 py-3 pl-4 italic border-purple hover:text-purple transition-colors"
+                  external
+                  aria-label={`Besuche ${project.title} Website`}
                 >
                   {project.linkText}
-                </Link>
+                </Button>
               </aside>
             )}
           </div>
@@ -77,7 +78,7 @@ export default async function ProjectDetailPage({
             </div>
           )}
 
-          <div className="sm:grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-2  gap-8">
             {/* All frame images */}
             {project.images.frames.map((frame, index) => (
               <div key={index}>
@@ -86,7 +87,7 @@ export default async function ProjectDetailPage({
                   alt={frame.alt}
                   width={1200}
                   height={900}
-                  className="w-full rounded border border-white/[0.26] block"
+                  className="w-full border border-white/[0.26] block"
                   quality={90}
                   loading={index < 2 ? "eager" : "lazy"}
                   placeholder="blur"

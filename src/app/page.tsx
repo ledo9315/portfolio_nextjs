@@ -81,7 +81,7 @@ export default function HomePage() {
         </section>
 
         <section
-          className="py-32 lg:py-44 bg-[var(--bg-color)]"
+          className="py-32 lg:py-44 bg-[var(--bg-color)] border-y border-white/[0.1]"
           id="projects"
           aria-labelledby="projects-title"
         >

@@ -22,7 +22,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen" role="main" aria-labelledby="about-title">
       {/* About Section */}
-      <section className="py-20 md:py-42" aria-labelledby="about-title">
+      <section className="py-42" aria-labelledby="about-title">
         <div className="container mx-auto px-4 md:px-16 lg:px-32 max-w-7xl">
           <div className="about-content flex flex-col gap-10">
             <div className="about-text">
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
       {/* Tech Stack Section */}
       <section
-        className="py-32 md:py-40"
+        className="py-32 md:py-40 bg-white/[0.01] border-y border-white/[0.1]"
         aria-labelledby="tech-stack-title"
         role="region"
       >
