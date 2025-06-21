@@ -16,7 +16,7 @@ export default function Impressum() {
       <div className="container mx-auto px-4 max-w-4xl">
         <article className="py-42">
           <h1
-            className="font-hanson text-4xl md:text-5xl lg:text-6xl uppercase  mb-12"
+            className="font-hanson text-[8vw] md:text-5xl lg:text-6xl uppercase  mb-12"
             id="impressum-title"
           >
             Impressum
@@ -24,7 +24,7 @@ export default function Impressum() {
 
           <div className="space-y-8">
             <div className="bg-white/[0.02] border border-white/[0.1] rounded-lg p-6 md:p-8">
-              <h2 className="font-hanson text-2xl md:text-3xl uppercase mb-6 ">
+              <h2 className="font-hanson ttext-[5vw] md:text-3xl uppercase mb-6 ">
                 Angaben gemäß § 5 TMG
               </h2>
 
@@ -39,7 +39,7 @@ export default function Impressum() {
             </div>
 
             <div className="bg-white/[0.02] border border-white/[0.1] rounded-lg p-6 md:p-8">
-              <h2 className="font-hanson text-2xl md:text-3xl uppercase mb-6 ">
+              <h2 className="font-hanson text-[5vw] md:text-3xl uppercase mb-6 ">
                 Kontakt
               </h2>
 
@@ -50,7 +50,9 @@ export default function Impressum() {
                     href="mailto:leonid.domagalsky@gmail.com"
                     className=" hover:underline transition-colors duration-200"
                   >
-                    leonid.domagalsky@gmail.com
+                    leonid.domagalsky
+                    <wbr />
+                    @gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -66,8 +68,10 @@ export default function Impressum() {
             </div>
 
             <div className="bg-white/[0.02] border border-white/[0.1] rounded-lg p-6 md:p-8">
-              <h2 className="font-hanson text-2xl md:text-3xl uppercase mb-6 ">
-                Haftungsausschluss
+              <h2 className="font-hanson text-[5vw] md:text-3xl uppercase mb-6">
+                Haftungs
+                <wbr />
+                ausschluss
               </h2>
 
               <div className="space-y-6 text-white/70 leading-relaxed">

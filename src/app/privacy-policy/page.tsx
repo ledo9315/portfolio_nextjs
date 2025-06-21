@@ -15,12 +15,12 @@ export default function Datenschutz() {
     >
       <div className="container mx-auto px-4 max-w-4xl">
         <article className="py-42">
-          <h1 className="font-hanson text-4xl md:text-5xl lg:text-6xl uppercase mb-12">
+          <h1 className="font-hanson text-[8vw] md:text-5xl lg:text-6xl uppercase mb-12">
             Datenschutz
           </h1>
           <section className="space-y-8">
             <div>
-              <h2 className="font-hanson text-2xl md:text-3xl uppercase mb-6 text-[var(--text-color)]">
+              <h2 className="font-hanson text-[5vw] md:text-3xl uppercase mb-6 text-[var(--text-color)]">
                 1. Datenschutz auf einen Blick
               </h2>
 
@@ -122,7 +122,7 @@ export default function Datenschutz() {
           </section>
           <section className="space-y-8 mt-12">
             <div>
-              <h2 className="font-hanson text-2xl md:text-3xl uppercase mb-6 text-[var(--text-color)]">
+              <h2 className="font-hanson text-[5vw] md:text-3xl uppercase mb-6 text-[var(--text-color)]">
                 2. Hosting
               </h2>
               <p className="text-white/70 leading-relaxed mb-6">
@@ -163,7 +163,7 @@ export default function Datenschutz() {
           </section>{" "}
           <section className="space-y-8 mt-12">
             <div>
-              <h2 className="font-hanson text-2xl md:text-3xl uppercase mb-6 text-[var(--text-color)]">
+              <h2 className="font-hanson text-[5vw] md:text-3xl uppercase mb-6 text-[var(--text-color)]">
                 3. Allgemeine Hinweise und Pflichtinformationen
               </h2>
 

@@ -31,7 +31,7 @@ export default async function ProjectDetailPage({
           <div className="max-w-[700px]">
             <h1
               id="project-title"
-              className="font-hanson uppercase text-5xl leading-tight mb-5"
+              className="font-hanson uppercase text-[6vw] md:text-5xl leading-tight mb-5"
             >
               {project.title}
             </h1>
