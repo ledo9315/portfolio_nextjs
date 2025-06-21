@@ -6,7 +6,7 @@ const projects: Project[] = [
     title: "Angela's Dance Academy",
     description: "Visuelle Identität, Branding, Logotype, Webseite",
     text: "Im Rahmen dieses Projekts habe ich meine Fähigkeiten in HTML und CSS genutzt, um eine dynamische und ansprechende Webseite für Angela's Dance Academy zu entwickeln. Die Webseite ist darauf ausgelegt, die Begeisterung und das Talent für Tanz in einer einzigartigen Weise zu präsentieren.",
-    keywords: "HTML, CSS, Responsive Design",
+    keywords: "HTML, SCSS",
     websiteUrl: "https://www.angelasdanceacademy.com/",
     linkText: "Link zur Webseite",
     images: {
@@ -38,7 +38,7 @@ const projects: Project[] = [
     title: "Metropol Theater",
     description: "Webseite, Branding, Kino-Design",
     text: "Im Studium habe ich im Rahmen des Moduls «WWW-Programmierung» eine Fullstack-Webseite für das Metropol-Theater entwickelt. Die Webseite bietet einen Überblick über aktuelle und kommende Filme, Vorstellungszeiten sowie Informationen zum Kino selbst. Zudem verfügt sie über einen Dashboard-Bereich, der es ermöglicht, Filme zu verwalten und das Programm effizient zu aktualisieren.",
-    keywords: "HTML, CSS, Kino Design",
+    keywords: "Deno, Oak, SQLite, Nunjucks",
     websiteUrl: "#",
     linkText: "Link zur Webseite",
     images: {
