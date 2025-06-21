@@ -52,7 +52,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen" role="main" aria-labelledby="contact-title">
       <section
-        className="contact py-12 md:py-0"
+        className="contact py-42 lg:py-0"
         aria-labelledby="contact-title"
       >
         <h1 id="contact-title" className="sr-only">
@@ -60,7 +60,7 @@ export default function ContactPage() {
         </h1>
         <div className="container mx-auto px-4 md:px-16 lg:px-32 max-w-7xl">
           <div className="grid min-h-screen md:min-h-[calc(100vh-70px)]">
-            <article className="contact__form-wrapper grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-24 lg:gap-36 py-12 md:py-0">
+            <article className="contact__form-wrapper grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-36 py-12 md:py-0">
               <aside className="contact__info-section order-1 md:order-1 self-center max-w-2xl mt-12 md:mt-0">
                 <h2 className="font-hanson contact__info-title text-3xl md:text-4xl font-bold uppercase mb-5 leading-tight">
                   Lass uns über <span className="text-purple">Projekte</span>{" "}

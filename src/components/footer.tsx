@@ -8,7 +8,7 @@ export function Footer() {
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-[auto_auto] gap-[50px] md:gap-20 items-start mb-[50px] relative z-[1]">
             <div className="text-center md:text-left">
-              <h3 className="font-hanson text-3xl md:text-4xl font-bold text-white mb-3 uppercase tracking-[1px]">
+              <h3 className="font-hanson text-[5vw] md:text-4xl font-bold text-white mb-3 uppercase tracking-[1px]">
                 Leonid Domahalskyy
               </h3>
               <p className="text-[1.1rem] text-white/80 mb-2 font-medium">
@@ -69,13 +69,13 @@ export function Footer() {
               aria-label="Legal"
             >
               <Link
-                href="/impressum"
+                href="/legal"
                 className="text-white/60 no-underline text-sm py-2 border-b border-transparent transition-all duration-300 ease-out relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-px after:bg-[var(--accent-color)] after:transition-all after:duration-300 after:ease-out after:-translate-x-1/2 hover:text-[var(--accent-color)] hover:after:w-full"
               >
                 Impressum
               </Link>
               <Link
-                href="/datenschutz"
+                href="/privacy-policy"
                 className="text-white/60 no-underline text-sm py-2 border-b border-transparent transition-all duration-300 ease-out relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-px after:bg-[var(--accent-color)] after:transition-all after:duration-300 after:ease-out after:-translate-x-1/2 hover:text-[var(--accent-color)] hover:after:w-full"
               >
                 Datenschutz
