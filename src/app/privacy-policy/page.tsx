@@ -8,11 +8,7 @@ export const metadata: Metadata = {
 
 export default function Datenschutz() {
   return (
-    <main
-      className="min-h-screen"
-      role="main"
-      aria-labelledby="datenschutz-title"
-    >
+    <>
       <div className="container mx-auto px-4 max-w-4xl">
         <article className="py-42">
           <h1 className="font-hanson text-[8vw] md:text-5xl lg:text-6xl uppercase mb-12">
@@ -286,6 +282,6 @@ export default function Datenschutz() {
           </section>
         </article>
       </div>
-    </main>
+    </>
   );
 }

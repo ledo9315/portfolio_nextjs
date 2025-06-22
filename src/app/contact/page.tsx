@@ -50,7 +50,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen" role="main" aria-labelledby="contact-title">
+    <>
       <section
         className="contact py-42 lg:py-0"
         aria-labelledby="contact-title"
@@ -259,6 +259,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

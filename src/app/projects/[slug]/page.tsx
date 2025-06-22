@@ -24,7 +24,7 @@ export default async function ProjectDetailPage({
   }
 
   return (
-    <main role="main" aria-labelledby="project-title">
+    <>
       {/* Project Description Section */}
       <section className="pt-42">
         <div className="container">
@@ -98,6 +98,6 @@ export default async function ProjectDetailPage({
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

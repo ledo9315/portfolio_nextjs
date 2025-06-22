@@ -3,11 +3,7 @@ import { Button } from "@/components/button";
 
 export default function NotFound() {
   return (
-    <main
-      role="main"
-      className="min-h-screen flex items-center justify-center bg-[var(--bg-color)]"
-      aria-labelledby="error-heading"
-    >
+    <>
       <div className="container text-center">
         <div className="max-w-2xl mx-auto">
           {/* 404 Number */}
@@ -36,6 +32,6 @@ export default function NotFound() {
           </Button>
         </div>
       </div>
-    </main>
+    </>
   );
 }

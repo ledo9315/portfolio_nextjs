@@ -8,11 +8,7 @@ export const metadata: Metadata = {
 
 export default function Impressum() {
   return (
-    <main
-      className="min-h-screen"
-      role="main"
-      aria-labelledby="impressum-title"
-    >
+    <>
       <div className="container mx-auto px-4 max-w-4xl">
         <article className="py-42">
           <h1
@@ -121,6 +117,6 @@ export default function Impressum() {
           </div>
         </article>
       </div>
-    </main>
+    </>
   );
 }

@@ -4,7 +4,7 @@ import projects from "@/data/projects";
 
 export function ProjectsSection() {
   return (
-    <div className="relative">
+    <>
       <h2
         className="font-hanson text-4xl sm:text-5xl uppercase tracking-[-0.02em] mb-12"
         id="projects-title"
@@ -41,6 +41,6 @@ export function ProjectsSection() {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
