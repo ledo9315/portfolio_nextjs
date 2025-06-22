@@ -5,11 +5,11 @@ export default function NotFound() {
   return (
     <>
       <div className="container text-center">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto py-42">
           {/* 404 Number */}
           <h1
             id="error-heading"
-            className="font-hanson text-9xl sm:text-[12rem] lg:text-[16rem] leading-none uppercase text-[var(--accent-color)] mb-8"
+            className="font-hanson text-9xl sm:text-[12rem] lg:text-[16rem] leading-none uppercase text-purple mb-8"
             aria-label="Fehler 404"
           >
             404
@@ -17,10 +17,10 @@ export default function NotFound() {
 
           {/* Error Message */}
           <div className="mb-12">
-            <h2 className="font-hanson text-4xl sm:text-5xl lg:text-6xl leading-tight uppercase mb-4 text-[var(--text-color)]">
+            <h2 className="font-hanson text-4xl sm:text-5xl lg:text-6xl leading-tight uppercase mb-4">
               Seite nicht gefunden
             </h2>
-            <p className="text-[var(--light-grey)] text-lg max-w-md mx-auto leading-relaxed">
+            <p className="text-white/60 text-lg max-w-md mx-auto leading-relaxed">
               Diese Seite existiert nicht oder wurde verschoben. Kehre zur
               Startseite zurück und entdecke meine Projekte.
             </p>

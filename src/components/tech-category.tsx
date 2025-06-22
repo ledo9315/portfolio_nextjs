@@ -56,21 +56,15 @@ export function TechCategory({ title, icon, technologies }: TechCategoryProps) {
                 background: styles.background,
                 color: styles.color,
                 borderColor: styles.borderColor,
-                borderWidth: "1px",
               }}
             >
-              <span
-                className="tech-name font-semibold text-sm md:text-base flex-1 overflow-hidden text-ellipsis whitespace-nowrap"
-                style={{ fontWeight: 600 }}
-              >
+              <span className="tech-name font-semibold text-sm md:text-base flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
                 {tech.name}
               </span>
               <span
                 className="tech-level text-xs font-medium uppercase tracking-wider opacity-80 flex-shrink-0 whitespace-nowrap"
                 style={{
                   color: styles.levelColor,
-                  letterSpacing: "0.5px",
-                  fontWeight: 500,
                 }}
               >
                 {tech.level}

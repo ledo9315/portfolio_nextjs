@@ -2,6 +2,93 @@ import Project from "@/types/project";
 
 const projects: Project[] = [
   {
+    slug: "metropol",
+    title: "Metropol Theater",
+    description: "Webseite, Branding, Kino-Design",
+    text: "Im Studium habe ich im Rahmen des Moduls «WWW-Programmierung» eine Fullstack-Webseite für das Metropol-Theater entwickelt. Die Webseite bietet einen Überblick über aktuelle und kommende Filme, Vorstellungszeiten sowie Informationen zum Kino selbst. Zudem verfügt sie über einen Dashboard-Bereich, der es ermöglicht, Filme zu verwalten und das Programm effizient zu aktualisieren.",
+    keywords: "Deno, Oak, SQLite, Nunjucks",
+    websiteUrl: "#",
+    linkText: "Link zur Webseite",
+    images: {
+      thumbnail: "/img/project-metropol/thumbnail.webp",
+      cover: "/img/project-metropol/thumbnail.webp",
+      frames: [
+        {
+          src: "/img/project-metropol/Frame-2.webp",
+          alt: "Metropol Theater Homepage",
+        },
+        {
+          src: "/img/project-metropol/Frame-3.webp",
+          alt: "Menü Sektion des Metropol Theaters",
+        },
+        {
+          src: "/img/project-metropol/Frame-4.webp",
+          alt: "Über uns Bereich der Metropol Website",
+        },
+        {
+          src: "/img/project-metropol/Frame-5.webp",
+          alt: "Über uns Bereich der Metropol Website",
+        },
+      ],
+    },
+  },
+
+  {
+    slug: "popcorn-buddys",
+    title: "Popcorn Buddys",
+    description: "Spieleentwicklung, Level-Design, Game-Design",
+    text: `Popcorn Buddies – Teamwork, Strategie und jede Menge knuspriger Spaß! 
+In Popcorn Buddies wird das Ploppen von Maiskörnern zur spannenden Mission! 
+Dieses einzigartige Tower-Defense-Spiel erfordert strategisches Denken und 
+schnelle Reaktionen, um die perfekte Knusprigkeit zu garantieren. Doch Vorsicht: 
+Wenn fünf ungeploppte Körner in die Packung gelangen, ist das Spiel vorbei! 
+Das Geheimnis zum Erfolg liegt in der Zusammenarbeit: Der PC-Spieler platziert 
+und verbessert verschiedene Türme – Mikrowelle, Ofen und Kühlschrank – und 
+sammelt das auf der Map erscheinende Geld ein. Der VR-Spieler übernimmt die 
+Feinarbeit, richtet die Türme aus und sorgt dafür, dass jedes Korn rechtzeitig ploppt.`,
+    keywords: "Unity, C#",
+    websiteUrl: "https://github.com/ledo9315/tower_buddys",
+    linkText: "Link zum GitHub Repository",
+    video: {
+      src: "/video/tower-buddys.mp4",
+      alt: "Tower Buddys Gameplay Video",
+      poster: "/img/project-tower-buddys/video-cover.png",
+    },
+    images: {
+      cover: "/img/project-tower-buddys/thumbnail.webp",
+      frames: [
+        {
+          src: "/img/project-tower-buddys/Frame-1.jpg",
+          alt: "Tower Buddys Spielansicht mit strategischen Elementen.",
+        },
+        {
+          src: "/img/project-tower-buddys/Frame-2.jpg",
+          alt: "Tower Buddys Level-Design mit verschiedenen Türmen.",
+        },
+      ],
+    },
+  },
+
+  {
+    slug: "capture-the-campus",
+    title: "Capture the Campus",
+    description: "Android App, Gamification",
+    text: `Capture the Campus ist eine Android-App für das Sammeln virtueller Punkte an verschiedenen Campus-Standorten. Die App nutzt GPS-Tracking und zeigt eine interaktive Campuskarte mit allen verfügbaren Sammelpunkten. Spieler können ihre Fortschritte verfolgen und sich in einer Highscore-Liste mit anderen messen. Entwickelt wurde die App mit Kotlin unter Verwendung der Android Location Services und Material Design.`,
+    keywords: "Kotlin, Android, Geolocation, Material Design",
+    linkText: "Zum GitHub Repository",
+    websiteUrl: "https://github.com/ledo9315/capture_the_campus",
+    images: {
+      cover: "/img/project-capture-the-campus/thumbnail.jpeg",
+      frames: [
+        {
+          src: "/img/project-capture-the-campus/Frame-1.webp",
+          alt: "Capture the Campus App Startbildschirm mit interaktiver Karte.",
+        },
+      ],
+    },
+  },
+
+  {
     slug: "angelas-dance-academy",
     title: "Angela's Dance Academy",
     description: "Visuelle Identität, Branding, Logotype, Webseite",
@@ -34,32 +121,24 @@ const projects: Project[] = [
   },
 
   {
-    slug: "metropol",
-    title: "Metropol Theater",
-    description: "Webseite, Branding, Kino-Design",
-    text: "Im Studium habe ich im Rahmen des Moduls «WWW-Programmierung» eine Fullstack-Webseite für das Metropol-Theater entwickelt. Die Webseite bietet einen Überblick über aktuelle und kommende Filme, Vorstellungszeiten sowie Informationen zum Kino selbst. Zudem verfügt sie über einen Dashboard-Bereich, der es ermöglicht, Filme zu verwalten und das Programm effizient zu aktualisieren.",
-    keywords: "Deno, Oak, SQLite, Nunjucks",
-    websiteUrl: "#",
-    linkText: "Link zur Webseite",
+    slug: "taskify",
+    title: "Taskify",
+    description: "Web-App, Todo-App",
+    text: `Taskify ist eine Todo-App zum Verwalten von Aufgaben. Entwickelt wurde die App mit Next.js.`,
+    keywords: "Next.js, SQLite, Drizzle ORM, React Hook Form, TanStack Query",
+    linkText: "Zum GitHub Repository",
+    websiteUrl: "https://taskify.ledo9315.ch",
     images: {
-      thumbnail: "/img/project-metropol/thumbnail.webp",
-      cover: "/img/project-metropol/thumbnail.webp",
+      cover: "/img/project-taskify/Frame-2.jpeg",
+      thumbnail: "/img/project-taskify/Frame-2.jpeg",
       frames: [
         {
-          src: "/img/project-metropol/Frame-2.webp",
-          alt: "Metropol Theater Homepage",
+          src: "/img/project-taskify/Frame-1.jpeg",
+          alt: "Taskify App Detailansicht einer Aufgabe.",
         },
         {
-          src: "/img/project-metropol/Frame-3.webp",
-          alt: "Menü Sektion des Metropol Theaters",
-        },
-        {
-          src: "/img/project-metropol/Frame-4.webp",
-          alt: "Über uns Bereich der Metropol Website",
-        },
-        {
-          src: "/img/project-metropol/Frame-5.webp",
-          alt: "Über uns Bereich der Metropol Website",
+          src: "/img/project-taskify/phone-frame.jpeg",
+          alt: "Taskify App Startbildschirm mit Aufgabenliste.",
         },
       ],
     },

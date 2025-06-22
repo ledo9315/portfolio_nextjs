@@ -14,6 +14,11 @@ interface Project {
       alt: string;
     }[];
   };
+  video?: {
+    src: string;
+    poster?: string;
+    alt?: string;
+  };
 }
 
 export default Project;

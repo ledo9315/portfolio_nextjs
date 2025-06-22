@@ -62,7 +62,21 @@ export default async function ProjectDetailPage({
       {/* Project Images Section */}
       <section className="py-[100px] md:py-[200px]">
         <div className="container">
-          <h2 className="sr-only">Projekt Bilder</h2>
+          <h2 className="sr-only">Projekt Medien</h2>
+
+          {/* Optional Video Section */}
+          {project.video && (
+            <div className="mb-12">
+              <video
+                className="w-full border border-white/30"
+                controls
+                preload="metadata"
+                aria-label={project.video.alt || `Video von ${project.title}`}
+                src={project.video.src}
+                poster={project.video.poster}
+              ></video>
+            </div>
+          )}
 
           {project.images.thumbnail && (
             <div className="mb-8">
@@ -78,7 +92,7 @@ export default async function ProjectDetailPage({
             </div>
           )}
 
-          <div className="grid grid-cols-1 xl:grid-cols-2  gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
             {/* All frame images */}
             {project.images.frames.map((frame, index) => (
               <div key={index}>
