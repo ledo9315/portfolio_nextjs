@@ -53,10 +53,7 @@ export default function AboutPage() {
                     className="text-lg leading-relaxed mb-6"
                   >
                     Ich komme aus Flensburg und studiere hier an der Hochschule{" "}
-                    <span
-                      className="font-semibold relative text-purple"
-                      aria-label="Studiengang Medieninformatik"
-                    >
+                    <span className="font-semibold relative text-purple">
                       Medieninformatik
                     </span>
                     . Meine Programmier-Kenntnisse habe ich durch
@@ -66,17 +63,11 @@ export default function AboutPage() {
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
                     Was mich richtig begeistert? Die Kombination aus{" "}
-                    <span
-                      className="font-semibold relative text-purple"
-                      aria-label="Schwerpunkt UI/UX Design"
-                    >
+                    <span className="font-semibold relative text-purple">
                       kreativem Design
                     </span>{" "}
                     und{" "}
-                    <span
-                      className="font-semibold relative text-purple"
-                      aria-label="Schwerpunkt Webentwicklung"
-                    >
+                    <span className="font-semibold relative text-purple">
                       sauberer Programmierung
                     </span>
                     . Eine Website muss nicht nur funktionieren - sie muss auch
@@ -243,7 +234,6 @@ export default function AboutPage() {
       <section
         className="py-20 md:py-32 bg-white/[0.01] border-y border-white/[0.1]"
         aria-labelledby="tech-stack-title"
-        role="region"
       >
         <div className="container mx-auto px-4 md:px-16 lg:px-32 max-w-7xl">
           <div className="section-header text-center mb-20">

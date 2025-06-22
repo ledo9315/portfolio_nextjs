@@ -80,7 +80,6 @@ export default function ContactPage() {
                   onSubmit={handleSubmit(onSubmit)}
                   className="contact__form grid gap-3"
                   id="contactForm"
-                  role="form"
                   aria-label="Kontaktformular"
                 >
                   <div className="contact__name-wrapper grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5">
