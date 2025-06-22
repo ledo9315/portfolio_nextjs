@@ -24,10 +24,10 @@ export default function Impressum() {
 
           <div className="space-y-8">
             <div className="bg-white/[0.02] border border-white/[0.1] rounded-lg p-6 md:p-8">
+              w{" "}
               <h2 className="font-hanson text-[5vw] md:text-3xl uppercase mb-6 ">
                 Angaben gemäß § 5 TMG
               </h2>
-
               <address className="text-white/70 text-lg leading-relaxed not-italic">
                 <div className=" block mb-2x">Leonid Domahalskyy</div>
                 Rude 13

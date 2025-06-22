@@ -4,11 +4,7 @@ import projects from "@/data/projects";
 
 export function ProjectsSection() {
   return (
-    <section
-      className="relative "
-      id="projects"
-      aria-labelledby="projects-title"
-    >
+    <div className="relative">
       <h2
         className="font-hanson text-4xl sm:text-5xl uppercase tracking-[-0.02em] mb-12"
         id="projects-title"
@@ -39,13 +35,12 @@ export function ProjectsSection() {
                     {project.description}
                   </span>
                 </div>
-
-                <figcaption className="mt-4">{project.title}</figcaption>
               </Link>
+              <figcaption className="mt-4">{project.title}</figcaption>
             </figure>
           </li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 }
