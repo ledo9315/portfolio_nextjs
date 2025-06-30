@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import projects from "@/data/projects";
-import { SquareArrowOutUpRight } from "lucide-react";
 import { Button } from "@/components/button";
 
 export async function generateStaticParams() {

@@ -126,8 +126,8 @@ Feinarbeit, richtet die Türme aus und sorgt dafür, dass jedes Korn rechtzeitig
     description: "Web-App, Todo-App",
     text: `Taskify ist eine Todo-App zum Verwalten von Aufgaben. Entwickelt wurde die App mit Next.js.`,
     keywords: "Next.js, SQLite, Drizzle ORM, React Hook Form, TanStack Query",
-    linkText: "Zum GitHub Repository",
-    websiteUrl: "https://taskify.ledo9315.ch",
+    linkText: "Link zur Webseite",
+    websiteUrl: "https://taskify.leonid-domahalskyy.com/de/landing",
     images: {
       cover: "/img/project-taskify/Frame-2.jpeg",
       thumbnail: "/img/project-taskify/Frame-2.jpeg",
