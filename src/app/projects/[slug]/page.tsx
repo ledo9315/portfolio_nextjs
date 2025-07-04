@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import projects from "@/data/projects";
 import { Button } from "@/components/button";
+import { ProjectImagesGrid } from "@/components/project-images-grid";
+import { AnimatedThumbnail } from "@/components/animated-thumbnail";
+import { AnimatedSection } from "@/components/animated-section";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -27,31 +30,44 @@ export default async function ProjectDetailPage({
       <section className="pt-42">
         <div className="container">
           <div className="max-w-[700px]">
-            <h1
-              id="project-title"
-              className="font-hanson uppercase text-[6vw] md:text-5xl leading-tight mb-5"
-            >
-              {project.title}
-            </h1>
-            <p className="text-white/60 font-medium mb-5">
-              {project.description}
-            </p>
-            <p className="mb-5 text-base font-medium leading-7">
-              {project.text}
-            </p>
-            <p className="italic mb-5 font-medium">{project.keywords}</p>
+            <AnimatedSection delay={0.1}>
+              <h1
+                id="project-title"
+                className="font-hanson uppercase text-[6vw] md:text-5xl leading-tight mb-5"
+              >
+                {project.title}
+              </h1>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={0.2}>
+              <p className="text-white/60 font-medium mb-5">
+                {project.description}
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={0.3}>
+              <p className="mb-5 text-base font-medium leading-7">
+                {project.text}
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={0.4}>
+              <p className="italic mb-5 font-medium">{project.keywords}</p>
+            </AnimatedSection>
 
             {/* Website Link */}
             {project.websiteUrl && (
-              <aside className="inline-block mt-2.5">
-                <Button
-                  href={project.websiteUrl}
-                  external
-                  aria-label={`Besuche ${project.title} Website`}
-                >
-                  {project.linkText}
-                </Button>
-              </aside>
+              <AnimatedSection delay={0.5}>
+                <aside className="inline-block mt-2.5">
+                  <Button
+                    href={project.websiteUrl}
+                    external
+                    aria-label={`Besuche ${project.title} Website`}
+                  >
+                    {project.linkText}
+                  </Button>
+                </aside>
+              </AnimatedSection>
             )}
           </div>
         </div>
@@ -64,7 +80,7 @@ export default async function ProjectDetailPage({
 
           {/* Optional Video Section */}
           {project.video && (
-            <div className="mb-12">
+            <AnimatedSection delay={0.1} className="mb-12">
               <video
                 className="w-full border border-white/30"
                 controls
@@ -73,41 +89,18 @@ export default async function ProjectDetailPage({
                 src={project.video.src}
                 poster={project.video.poster}
               ></video>
-            </div>
+            </AnimatedSection>
           )}
 
           {project.images.thumbnail && (
-            <div className="mb-8">
-              <Image
-                src={project.images.thumbnail}
-                alt={`${project.title} Thumbnail`}
-                width={1200}
-                height={900}
-                className="w-full border border-white/30"
-                quality={90}
-                priority
-              />
-            </div>
+            <AnimatedThumbnail
+              src={project.images.thumbnail}
+              alt={`${project.title} Thumbnail`}
+              title={project.title}
+            />
           )}
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-            {/* All frame images */}
-            {project.images.frames.map((frame, index) => (
-              <div key={index}>
-                <Image
-                  src={frame.src}
-                  alt={frame.alt}
-                  width={1200}
-                  height={900}
-                  className="w-full border border-white/[0.26] block"
-                  quality={90}
-                  loading={index < 2 ? "eager" : "lazy"}
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                />
-              </div>
-            ))}
-          </div>
+          <ProjectImagesGrid frames={project.images.frames} />
         </div>
       </section>
     </>

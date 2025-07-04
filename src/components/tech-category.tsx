@@ -1,4 +1,4 @@
-import { Technology } from "@/types/technology";
+import { Technology } from "../types/technology";
 
 interface TechCategoryProps {
   title: string;
@@ -31,11 +31,18 @@ export function TechCategory({ title, icon, technologies }: TechCategoryProps) {
           borderColor: "rgba(255, 255, 255, 0.15)",
           levelColor: "rgba(255, 255, 255, 0.6)",
         };
+      default:
+        return {
+          background: "rgba(255, 255, 255, 0.05)",
+          color: "rgba(255, 255, 255, 0.8)",
+          borderColor: "rgba(255, 255, 255, 0.15)",
+          levelColor: "rgba(255, 255, 255, 0.6)",
+        };
     }
   };
 
   return (
-    <div className="rounded border border-white/20 bg-white/3 relative overflow-visible p-8 md:p-12">
+    <div className="rounded border border-white/20 bg-white/3 relative overflow-visible p-8 md:p-12 h-full">
       <div className="category-header flex items-center mb-8">
         <div className="text-purple category-icon flex items-center justify-center w-12 h-12 flex-shrink-0 mr-1">
           {icon}

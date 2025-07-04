@@ -4,6 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import { LoaderCircle } from "lucide-react";
 import { Button } from "@/components/button";
+import { motion } from "framer-motion";
 
 interface Inputs {
   firstName: string;
@@ -60,30 +61,40 @@ export default function ContactPage() {
         </h1>
         <div className="container mx-auto px-4 md:px-16 lg:px-32 max-w-7xl">
           <div className="grid min-h-screen md:min-h-[calc(100vh-70px)]">
-            <article className="contact__form-wrapper grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-36 py-12 md:py-0">
-              <aside className="contact__info-section order-1 md:order-1 self-center max-w-2xl mt-12 md:mt-0">
-                <h2 className="font-hanson contact__info-title text-3xl md:text-4xl font-bold uppercase mb-5 leading-tight">
+            <article className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-36 py-12 md:py-0">
+              <motion.aside
+                className="order-1 md:order-1 self-center max-w-2xl mt-12 md:mt-0"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <h2 className="font-hanson text-3xl md:text-4xl font-bold uppercase mb-5 leading-tight">
                   Lass uns über <span className="text-purple">Projekte</span>{" "}
                   sprechen
                 </h2>
-                <p className="contact__info-text mb-8 text-base md:text-lg leading-relaxed">
+                <p className="mb-8 text-base md:text-lg leading-relaxed">
                   Ich bin gespannt auf deine Ideen und freue mich darauf, mit
                   dir zusammenzuarbeiten. Schreib mir einfach eine Nachricht und
                   ich melde mich bei dir.
                 </p>
-              </aside>
+              </motion.aside>
 
               {/* Form Section */}
-              <div className="contact__form-section order-2 md:order-2 self-center max-w-2xl">
+              <motion.div
+                className="order-2 md:order-2 self-center max-w-2xl"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              >
                 <h2 className="sr-only">Schreib mir eine Nachricht</h2>
                 <form
                   onSubmit={handleSubmit(onSubmit)}
-                  className="contact__form grid gap-3"
+                  className="grid gap-3"
                   id="contactForm"
                   aria-label="Kontaktformular"
                 >
-                  <div className="contact__name-wrapper grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5">
-                    <div className="contact__form-group flex flex-col mb-5 group">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5">
+                    <div className="flex flex-col mb-5 group">
                       <label
                         htmlFor="first-name"
                         className="mb-1 text-base text-white/60 transition-colors duration-200 group-focus-within:text-purple"
@@ -121,7 +132,7 @@ export default function ContactPage() {
                         </span>
                       )}
                     </div>
-                    <div className="contact__form-group flex flex-col mb-5 group">
+                    <div className="flex flex-col mb-5 group">
                       <label
                         htmlFor="last-name"
                         className="mb-1 text-base text-white/60 transition-colors duration-200 group-focus-within:text-purple"
@@ -161,7 +172,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="contact__form-group flex flex-col mb-5 group">
+                  <div className="flex flex-col mb-5 group">
                     <label
                       htmlFor="email"
                       className="mb-1 text-base text-white/60 transition-colors duration-200 group-focus-within:text-purple"
@@ -195,7 +206,7 @@ export default function ContactPage() {
                     )}
                   </div>
 
-                  <div className="contact__form-group flex flex-col mb-5 group">
+                  <div className="flex flex-col mb-5 group">
                     <label
                       htmlFor="message"
                       className="mb-1 text-base text-white/60 transition-colors duration-200 group-focus-within:text-purple"
@@ -245,15 +256,19 @@ export default function ContactPage() {
 
                 {/* Toast Notification */}
                 {showToast && (
-                  <div
+                  <motion.div
                     className="toast bg-green-600 fixed bottom-5 right-5 px-4 py-3 rounded z-50 transition-opacity duration-500"
                     role="alert"
                     aria-live="polite"
+                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.8, y: 20 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
                   >
                     <p>Danke! Deine Nachricht wurde erfolgreich gesendet.</p>
-                  </div>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
             </article>
           </div>
         </div>

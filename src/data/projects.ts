@@ -2,6 +2,29 @@ import Project from "@/types/project";
 
 const projects: Project[] = [
   {
+    slug: "taskify",
+    title: "Taskify",
+    description: "Web-App, Todo-App",
+    text: `Taskify ist eine Todo-App zum Verwalten von Aufgaben. Entwickelt wurde die App mit Next.js.`,
+    keywords: "Next.js, SQLite, Drizzle ORM, React Hook Form, TanStack Query",
+    linkText: "Link zur Webseite",
+    websiteUrl: "https://taskify.leonid-domahalskyy.com/de/landing",
+    images: {
+      cover: "/img/project-taskify/Frame-7.jpeg",
+      thumbnail: "/img/project-taskify/thumbnail.jpg",
+      frames: [
+        {
+          src: "/img/project-taskify/Frame-3.jpeg",
+          alt: "Taskify App Detailansicht einer Aufgabe.",
+        },
+        {
+          src: "/img/project-taskify/Frame-4.jpeg",
+          alt: "Taskify App Startbildschirm mit Aufgabenliste.",
+        },
+      ],
+    },
+  },
+  {
     slug: "metropol",
     title: "Metropol Theater",
     description: "Webseite, Branding, Kino-Design",
@@ -28,6 +51,38 @@ const projects: Project[] = [
         {
           src: "/img/project-metropol/Frame-5.webp",
           alt: "Über uns Bereich der Metropol Website",
+        },
+      ],
+    },
+  },
+
+  {
+    slug: "angelas-dance-academy",
+    title: "Angela's Dance Academy",
+    description: "Visuelle Identität, Branding, Logotype, Webseite",
+    text: "Im Rahmen dieses Projekts habe ich meine Fähigkeiten in HTML und CSS genutzt, um eine dynamische und ansprechende Webseite für Angela's Dance Academy zu entwickeln. Die Webseite ist darauf ausgelegt, die Begeisterung und das Talent für Tanz in einer einzigartigen Weise zu präsentieren.",
+    keywords: "HTML, SCSS",
+    websiteUrl: "https://www.angelasdanceacademy.com/",
+    linkText: "Link zur Webseite",
+    images: {
+      thumbnail: "/img/project-angelas-dance-academy/thumbnail.webp",
+      cover: "/img/project-angelas-dance-academy/Frame-1.webp",
+      frames: [
+        {
+          src: "/img/project-angelas-dance-academy/Frame-1.webp",
+          alt: "GIF der Angela's Dance Academy-Website, das die Seite von oben nach unten scrollt und verschiedene Abschnitte zeigt.",
+        },
+        {
+          src: "/img/project-angelas-dance-academy/Frame-2.webp",
+          alt: "Logo der Angela's Dance Academy mit einem stilisierten Buchstaben 'A' und dem Text 'Angela's Dance Academy' daneben.",
+        },
+        {
+          src: "/img/project-angelas-dance-academy/Frame-3.webp",
+          alt: "Weitere Ansicht der Angela's Dance Academy Website",
+        },
+        {
+          src: "/img/project-angelas-dance-academy/Frame-4.webp",
+          alt: "Detailansicht der Angela's Dance Academy Website",
         },
       ],
     },
@@ -83,62 +138,6 @@ Feinarbeit, richtet die Türme aus und sorgt dafür, dass jedes Korn rechtzeitig
         {
           src: "/img/project-capture-the-campus/Frame-1.webp",
           alt: "Capture the Campus App Startbildschirm mit interaktiver Karte.",
-        },
-      ],
-    },
-  },
-
-  {
-    slug: "angelas-dance-academy",
-    title: "Angela's Dance Academy",
-    description: "Visuelle Identität, Branding, Logotype, Webseite",
-    text: "Im Rahmen dieses Projekts habe ich meine Fähigkeiten in HTML und CSS genutzt, um eine dynamische und ansprechende Webseite für Angela's Dance Academy zu entwickeln. Die Webseite ist darauf ausgelegt, die Begeisterung und das Talent für Tanz in einer einzigartigen Weise zu präsentieren.",
-    keywords: "HTML, SCSS",
-    websiteUrl: "https://www.angelasdanceacademy.com/",
-    linkText: "Link zur Webseite",
-    images: {
-      thumbnail: "/img/project-angelas-dance-academy/thumbnail.webp",
-      cover: "/img/project-angelas-dance-academy/Frame-1.webp",
-      frames: [
-        {
-          src: "/img/project-angelas-dance-academy/Frame-1.webp",
-          alt: "GIF der Angela's Dance Academy-Website, das die Seite von oben nach unten scrollt und verschiedene Abschnitte zeigt.",
-        },
-        {
-          src: "/img/project-angelas-dance-academy/Frame-2.webp",
-          alt: "Logo der Angela's Dance Academy mit einem stilisierten Buchstaben 'A' und dem Text 'Angela's Dance Academy' daneben.",
-        },
-        {
-          src: "/img/project-angelas-dance-academy/Frame-3.webp",
-          alt: "Weitere Ansicht der Angela's Dance Academy Website",
-        },
-        {
-          src: "/img/project-angelas-dance-academy/Frame-4.webp",
-          alt: "Detailansicht der Angela's Dance Academy Website",
-        },
-      ],
-    },
-  },
-
-  {
-    slug: "taskify",
-    title: "Taskify",
-    description: "Web-App, Todo-App",
-    text: `Taskify ist eine Todo-App zum Verwalten von Aufgaben. Entwickelt wurde die App mit Next.js.`,
-    keywords: "Next.js, SQLite, Drizzle ORM, React Hook Form, TanStack Query",
-    linkText: "Link zur Webseite",
-    websiteUrl: "https://taskify.leonid-domahalskyy.com/de/landing",
-    images: {
-      cover: "/img/project-taskify/Frame-2.jpeg",
-      thumbnail: "/img/project-taskify/Frame-2.jpeg",
-      frames: [
-        {
-          src: "/img/project-taskify/Frame-1.jpeg",
-          alt: "Taskify App Detailansicht einer Aufgabe.",
-        },
-        {
-          src: "/img/project-taskify/phone-frame.jpeg",
-          alt: "Taskify App Startbildschirm mit Aufgabenliste.",
         },
       ],
     },

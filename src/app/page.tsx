@@ -1,5 +1,7 @@
-import Image from "next/image";
+"use client";
+
 import { ChevronDown } from "lucide-react";
+import { BackgroundVideo } from "@/components/background-video";
 import { ProjectsSection } from "@/components/projects-section";
 
 export default function HomePage() {
@@ -11,27 +13,7 @@ export default function HomePage() {
         role="banner"
       >
         <div className="container grid items-center h-full pt-[70px]">
-          <video
-            className="absolute top-0 left-0 w-full h-screen object-cover -z-10"
-            autoPlay
-            muted
-            loop
-            playsInline
-            aria-hidden="true"
-            poster="/img/fallback-image.webp"
-          >
-            <source src="/video/bg-video.mp4" type="video/mp4" />
-            <Image
-              src="/img/fallback-image.webp"
-              alt=""
-              width={1920}
-              height={1080}
-              priority
-              className="absolute top-0 left-0 w-full h-screen object-cover"
-            />
-          </video>
-
-          {/* Light theme overlay for better text contrast */}
+          <BackgroundVideo />
           <div
             className="absolute top-0 left-0 w-full h-screen bg-black/20 dark:bg-black/20 light:bg-white/30 -z-[5]"
             aria-hidden="true"

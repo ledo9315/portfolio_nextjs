@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Navigation } from "@/components/navigation";
+import { Navigation } from "@/components/header";
 import { Footer } from "@/components/footer";
 import "./globals.css";
 
@@ -210,7 +210,7 @@ export default function RootLayout({
               Zum Hauptinhalt springen
             </a>
             <Navigation />
-            <main id="main-content" className="flex-1">
+            <main id="main-content" className="flex-1 relative">
               {children}
             </main>
             <Footer />
