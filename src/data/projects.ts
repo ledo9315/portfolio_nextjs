@@ -105,7 +105,7 @@ Feinarbeit, richtet die Türme aus und sorgt dafür, dass jedes Korn rechtzeitig
     websiteUrl: "https://github.com/ledo9315/tower_buddys",
     linkText: "Link zum GitHub Repository",
     video: {
-      src: "/video/tower-buddys.mp4",
+      src: "/video/project-video.mp4",
       alt: "Tower Buddys Gameplay Video",
       poster: "/img/project-tower-buddys/video-cover.png",
     },
