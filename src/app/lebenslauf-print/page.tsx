@@ -465,7 +465,7 @@ const CVPrintComponent = () => {
             <ul className="skill-list">
               <li>• Git & GitHub</li>
               <li>• Vercel</li>
-              <li>• Figma (Expert)</li>
+              <li>• Figma</li>
               <li>• Better-Auth</li>
             </ul>
           </div>
