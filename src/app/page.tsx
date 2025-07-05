@@ -3,7 +3,8 @@
 import { MdKeyboardArrowDown as ChevronDown } from "react-icons/md";
 import { BackgroundVideo } from "@/components/background-video";
 import { ProjectsSection } from "@/components/projects-section";
-import { LuFileUser, LuSquareArrowOutUpRight } from "react-icons/lu";
+import { LuSquareArrowOutUpRight } from "react-icons/lu";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
@@ -20,7 +21,17 @@ export default function HomePage() {
             aria-hidden="true"
           ></div>
 
-          <div className="self-end">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              type: "spring",
+              stiffness: 50,
+              delay: 0.2,
+            }}
+            className="self-end"
+          >
             <h1
               id="hero-heading"
               className="font-hanson text-[2.5rem] sm:text-[4.2rem] leading-[1.1] uppercase mb-2.5 text-white dark:text-white light:text-black"
@@ -38,7 +49,7 @@ export default function HomePage() {
                 <br />
                 <span className="text-purple not-italic">designer</span>
                 <br />
-                <span className="text-purple not-italic">fullstack</span>
+                <span className="text-purple not-italic">web</span>
                 <br />
                 <span className="text-yellow-green not-italic">developer</span>
               </span>
@@ -56,7 +67,7 @@ export default function HomePage() {
                 <LuSquareArrowOutUpRight />
               </a>
             </div>
-          </div>
+          </motion.div>
 
           <a
             href="#projects"
