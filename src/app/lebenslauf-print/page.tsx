@@ -572,13 +572,10 @@ export default function LebenslaufOptimizedPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[var(--bg-color)]">
+    <div className="min-h-screen">
       <div className="container">
         {/* Navigation & Print Button */}
-        <div
-          className="print-button text-center space-y-4"
-          style={{ marginTop: "120px", marginBottom: "32px" }}
-        >
+        <div className="print-button text-center space-y-4 mt-24 mb-8">
           <div className="flex items-center justify-center gap-4">
             <button
               onClick={handlePrint}
@@ -591,7 +588,7 @@ export default function LebenslaufOptimizedPage() {
         </div>
 
         {/* CV Content */}
-        <div className="bg-white rounded-lg shadow-2xl overflow-hidden mb-8">
+        <div className="bg-gray-200 rounded-lg shadow-2xl overflow-hidden mb-8">
           <div ref={componentRef}>
             <CVPrintComponent />
           </div>
