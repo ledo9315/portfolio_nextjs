@@ -33,6 +33,7 @@ export function Button({
     before:from-transparent before:via-white/10 before:to-transparent 
     before:transition-[left] before:duration-600
     hover:before:left-full active:-translate-y-px
+    focus-visible:transform focus-visible:scale-[1.02]
     ${disabled ? "opacity-50 cursor-not-allowed" : ""}
   `;
 

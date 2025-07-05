@@ -60,7 +60,7 @@ export default function HomePage() {
                 href="/lebenslauf-print"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-3 py-3.5 px-6 text-white/90 no-underline rounded-lg bg-gradient-to-r from-purple/20 to-yellow-green/20 border border-white/20 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] font-medium text-[0.95rem] relative overflow-hidden backdrop-blur-sm hover:text-white hover:bg-gradient-to-r hover:from-purple/30 hover:to-yellow-green/30 hover:border-white/30 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(161,150,223,0.25),0_6px_15px_rgba(144,212,145,0.15)] active:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-purple focus:ring-offset-2 focus:ring-offset-transparent"
+                className="group flex items-center justify-center gap-3 py-3.5 px-6 text-white/90 no-underline rounded-lg bg-gradient-to-r from-purple/20 to-yellow-green/20 border border-white/20 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] font-medium text-[0.95rem] relative overflow-hidden backdrop-blur-sm hover:text-white hover:bg-gradient-to-r hover:from-purple/30 hover:to-yellow-green/30 hover:border-white/30 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(161,150,223,0.25),0_6px_15px_rgba(144,212,145,0.15)] active:-translate-y-0.5 focus-visible:text-white focus-visible:bg-gradient-to-r focus-visible:from-purple/30 focus-visible:to-yellow-green/30 focus-visible:border-white/30 focus-visible:-translate-y-1 focus-visible:shadow-[0_12px_30px_rgba(161,150,223,0.25),0_6px_15px_rgba(144,212,145,0.15)] focus-visible:no-underline"
                 aria-label="Lebenslauf als PDF öffnen"
               >
                 <span>Lebenslauf ansehen</span>
@@ -71,7 +71,7 @@ export default function HomePage() {
 
           <a
             href="#projects"
-            className="self-end justify-self-center flex justify-center items-end mb-8 w-full h-8 focus:outline-none focus:ring-2 focus:ring-portfolio-purple focus:ring-offset-2 focus:ring-offset-transparent rounded"
+            className="self-end justify-self-center flex justify-center items-end mb-8 w-auto h-8 rounded p-2 focus-visible:bg-white/10"
             aria-label="Zu den Projekten scrollen"
           >
             <ChevronDown

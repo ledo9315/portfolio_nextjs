@@ -64,8 +64,8 @@ export default function ContactPage() {
             <article className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-36 py-12 md:py-0">
               <motion.aside
                 className="order-1 md:order-1 self-center max-w-2xl mt-12 md:mt-0"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <h2 className="font-hanson text-3xl md:text-4xl font-bold uppercase mb-5 leading-tight">
@@ -82,8 +82,8 @@ export default function ContactPage() {
               {/* Form Section */}
               <motion.div
                 className="order-2 md:order-2 self-center max-w-2xl"
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               >
                 <h2 className="sr-only">Schreib mir eine Nachricht</h2>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                         })}
                         id="first-name"
                         type="text"
-                        className="p-1 text-base bg-transparent border-0 border-b border-white/30 focus:outline-none transition-colors group-focus-within:border-purple"
+                        className="p-1 text-base bg-transparent border-0 border-b border-white/30 transition-colors group-focus-within:border-purple focus-visible:border-purple"
                         aria-describedby={
                           errors.firstName ? "first-name-error" : undefined
                         }
@@ -155,7 +155,7 @@ export default function ContactPage() {
                         })}
                         id="last-name"
                         type="text"
-                        className="p-1 text-base bg-transparent border-0 border-b border-white/30 focus:outline-none transition-colors group-focus-within:border-purple"
+                        className="p-1 text-base bg-transparent border-0 border-b border-white/30 transition-colors group-focus-within:border-purple focus-visible:border-purple"
                         aria-describedby={
                           errors.lastName ? "last-name-error" : undefined
                         }
@@ -190,7 +190,7 @@ export default function ContactPage() {
                       })}
                       id="email"
                       type="email"
-                      className="p-1 text-base bg-transparent border-0 border-b border-white/30 focus:outline-none transition-colors group-focus-within:border-purple"
+                      className="p-1 text-base bg-transparent border-0 border-b border-white/30 transition-colors group-focus-within:border-purple focus-visible:border-purple"
                       aria-describedby={
                         errors.email ? "email-error" : undefined
                       }
@@ -229,7 +229,7 @@ export default function ContactPage() {
                       })}
                       id="message"
                       rows={5}
-                      className="p-1 text-base bg-transparent border-0 border-b border-white/30 focus:outline-none transition-colors group-focus-within:border-purple"
+                      className="p-1 text-base bg-transparent border-0 border-b border-white/30 transition-colors group-focus-within:border-purple focus-visible:border-purple resize-none"
                       aria-describedby={
                         errors.message ? "message-error" : undefined
                       }

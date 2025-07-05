@@ -246,10 +246,51 @@
     border: 0;
   }
 
-  /* Focus visible improvements */
-  .focus-visible:focus-visible {
+  /* Global Focus Styles - Einheitliches Design für alle interaktiven Elemente */
+  *:focus {
+    outline: none;
+  }
+
+  *:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 4px rgba(161, 150, 223, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Spezielle Focus-Styles für verschiedene Element-Typen */
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(161, 150, 223, 0.2);
+    transform: translateY(-1px);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(161, 150, 223, 0.2);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+  }
+
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(161, 150, 223, 0.2);
+    border-color: var(--accent-color) !important;
+  }
+
+  /* Focus-Styles für mobile Touchscreens anpassen */
+  @media (pointer: coarse) {
+    *:focus-visible {
+      outline-width: 3px;
+      outline-offset: 3px;
+      box-shadow: 0 0 0 6px rgba(161, 150, 223, 0.2);
+    }
   }
 
   /* Reduced motion support */

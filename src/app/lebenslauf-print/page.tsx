@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 import {
   MdLocationOn as MapPin,
@@ -16,6 +16,7 @@ import {
   MdFavorite as Heart,
   MdOpenInNew as ExternalLink,
 } from "react-icons/md";
+import Loading from "../loading";
 
 const CVPrintComponent = () => {
   return (
@@ -345,7 +346,7 @@ const CVPrintComponent = () => {
             <div className="job-title">
               Verfahrensmechaniker für Kunststoff- und Kautschuktechnik
             </div>
-            <div className="job-date">08.2015 - 04.2021</div>
+            <div className="job-date">08.2018 - 04.2021</div>
           </div>
           <div className="job-company">Multiflex Folien</div>
           <div className="job-description">
@@ -355,20 +356,6 @@ const CVPrintComponent = () => {
             <br />
             • Instandsetzen und Pflege der Maschinen
             <br />• Qualitätskontrolle
-          </div>
-        </div>
-
-        <div className="job-entry">
-          <div className="job-header">
-            <div className="job-title">Aushilfe im Verkauf</div>
-            <div className="job-date">01.2012 - 08.2015</div>
-          </div>
-          <div className="job-company">Schuh Eggers</div>
-          <div className="job-description">
-            • Führen von Verkaufsgesprächen
-            <br />
-            • Gestaltung des Verkaufsraums
-            <br />• Einräumen der Ware
           </div>
         </div>
       </div>
@@ -544,6 +531,16 @@ const CVPrintComponent = () => {
 export default function LebenslaufOptimizedPage() {
   const componentRef = useRef<HTMLDivElement>(null);
 
+  const [isloading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handlePrint = useReactToPrint({
     contentRef: componentRef,
     documentTitle: "Leonid_Domahalskyy_Lebenslauf",
@@ -571,6 +568,8 @@ export default function LebenslaufOptimizedPage() {
     `,
   });
 
+  if (isloading) return <Loading />;
+
   return (
     <div className="min-h-screen">
       <div className="container">
@@ -588,7 +587,7 @@ export default function LebenslaufOptimizedPage() {
         </div>
 
         {/* CV Content */}
-        <div className="bg-gray-200 rounded-lg shadow-2xl overflow-hidden mb-8">
+        <div className="bg-[white] rounded-lg shadow-2xl overflow-hidden mb-8">
           <div ref={componentRef}>
             <CVPrintComponent />
           </div>

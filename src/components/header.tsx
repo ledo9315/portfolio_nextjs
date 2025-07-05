@@ -50,7 +50,7 @@ export function Navigation() {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <motion.div
-          className="hover:scale-105 active:scale-95 transition-all duration-300"
+          className="hover:scale-105 active:scale-95 transition-all duration-300 focus-within:scale-105"
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -59,7 +59,7 @@ export function Navigation() {
             duration: 0.7,
           }}
         >
-          <Link href="/">
+          <Link href="/" className="block rounded-lg focus-visible:scale-110">
             <Image
               src="/img/icons/logo.svg"
               alt="Leonid Domahalskyy Logo"
@@ -87,7 +87,7 @@ export function Navigation() {
                 <Link
                   onClick={closeMenu}
                   href={link.href}
-                  className="text-white no-underline text-sm py-2 border-b border-transparent transition-all duration-300 ease-out relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-px after:bg-[var(--accent-color)] after:transition-all after:duration-300 after:ease-out after:-translate-x-1/2 hover:text-purple hover:after:w-full"
+                  className="text-white no-underline text-sm py-2 border-b border-transparent transition-all duration-300 ease-out relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-px after:bg-[var(--accent-color)] after:transition-all after:duration-300 after:ease-out after:-translate-x-1/2 hover:text-purple hover:after:w-full focus-visible:text-purple focus-visible:after:w-full focus-visible:no-underline"
                 >
                   {link.title}
                 </Link>
@@ -99,7 +99,7 @@ export function Navigation() {
         {/* Mobile Menu Button */}
         <motion.button
           whileTap={{ scale: 0.8 }}
-          className="lg:hidden cursor-pointer"
+          className="lg:hidden cursor-pointer p-2 rounded-md focus-visible:bg-white/10"
           onClick={toggleMenu}
           aria-label="Hauptmenü"
         >
@@ -138,7 +138,7 @@ export function Navigation() {
                     <Link
                       href={link.href}
                       onClick={toggleMenu}
-                      className="group flex items-center justify-center h-12 bg-gradient-to-br from-dark-grey/50 to-dark-grey/30 hover:from-purple/20 hover:to-purple/10 border border-purple/30 hover:border-purple/50 rounded-xl transition-all duration-300 ease-out transform hover:scale-102 hover:shadow-lg hover:shadow-purple/20"
+                      className="group flex items-center justify-center h-12 bg-gradient-to-br from-dark-grey/50 to-dark-grey/30 hover:from-purple/20 hover:to-purple/10 border border-purple/30 hover:border-purple/50 rounded-xl transition-all duration-300 ease-out transform hover:scale-102 hover:shadow-lg hover:shadow-purple/20 focus-visible:from-purple/20 focus-visible:to-purple/10 focus-visible:border-purple/50 focus-visible:scale-102 focus-visible:shadow-lg focus-visible:shadow-purple/20 focus-visible:no-underline"
                     >
                       {link.title}
                     </Link>
@@ -152,7 +152,7 @@ export function Navigation() {
               {SOCIAL_LINKS.map((link) => (
                 <div key={link.title}>
                   <Link
-                    className="group flex items-center justify-center w-12 h-12 bg-gradient-to-br from-dark-grey/50 to-dark-grey/30 hover:from-purple/20 hover:to-purple/10 border border-purple/30 hover:border-purple/50 rounded-xl transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg hover:shadow-purple/20"
+                    className="group flex items-center justify-center w-12 h-12 bg-gradient-to-br from-dark-grey/50 to-dark-grey/30 hover:from-purple/20 hover:to-purple/10 border border-purple/30 hover:border-purple/50 rounded-xl transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg hover:shadow-purple/20 focus-visible:from-purple/20 focus-visible:to-purple/10 focus-visible:border-purple/50 focus-visible:scale-105 focus-visible:shadow-lg focus-visible:shadow-purple/20 focus-visible:no-underline"
                     onClick={toggleMenu}
                     href={link.href}
                   >

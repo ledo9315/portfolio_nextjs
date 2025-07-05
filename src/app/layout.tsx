@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/header";
 import { Footer } from "@/components/footer";
 import "./globals.css";
+import { CustomCursor } from "@/components/custom-cursor";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

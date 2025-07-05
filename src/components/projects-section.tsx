@@ -68,7 +68,10 @@ export function ProjectsSection() {
               }}
               className="justify-self-center cursor-pointer relative overflow-hidden group"
             >
-              <Link href={`/projects/${project.slug}`}>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="block focus-visible:scale-[1.02] focus-visible:no-underline transition-transform duration-300"
+              >
                 <Image
                   src={project.images.cover}
                   alt={`Screenshot von ${project.title}`}
