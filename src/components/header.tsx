@@ -20,7 +20,7 @@ export function Navigation() {
   const NAV_LINKS = [
     {
       title: "PROJEKTE",
-      href: "/#main",
+      href: "/#projects",
     },
     {
       title: "ÜBER MICH",

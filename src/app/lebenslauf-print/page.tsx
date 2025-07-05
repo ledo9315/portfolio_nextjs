@@ -17,6 +17,8 @@ import {
   MdOpenInNew as ExternalLink,
 } from "react-icons/md";
 import Loading from "../loading";
+import { BiUser } from "react-icons/bi";
+import { FiTool } from "react-icons/fi";
 
 const CVPrintComponent = () => {
   return (
@@ -231,7 +233,10 @@ const CVPrintComponent = () => {
 
       {/* Über mich */}
       <div className="section">
-        <h2>Über mich</h2>
+        <h2>
+          <BiUser size={16} style={{ display: "inline", marginRight: "8pt" }} />
+          Über mich
+        </h2>
         <div className="about-text">
           Ich komme aus Flensburg und studiere hier an der Hochschule
           Medieninformatik. Meine Programmier-Kenntnisse habe ich durch
@@ -245,7 +250,13 @@ const CVPrintComponent = () => {
 
       {/* Ausbildung */}
       <div className="section">
-        <h2>Ausbildung</h2>
+        <h2>
+          <GraduationCap
+            size={16}
+            style={{ display: "inline", marginRight: "8pt" }}
+          />
+          Ausbildung
+        </h2>
         <div className="job-entry">
           <div className="job-header">
             <div className="job-title">
@@ -292,7 +303,13 @@ const CVPrintComponent = () => {
 
       {/* Berufserfahrung */}
       <div className="section">
-        <h2>Berufserfahrung</h2>
+        <h2>
+          <Briefcase
+            size={16}
+            style={{ display: "inline", marginRight: "8pt" }}
+          />
+          Berufserfahrung
+        </h2>
 
         <div className="job-entry">
           <div className="job-header">
@@ -362,7 +379,10 @@ const CVPrintComponent = () => {
 
       {/* Projekte */}
       <div className="section">
-        <h2>Projekte & Erfahrung</h2>
+        <h2>
+          <Code size={16} style={{ display: "inline", marginRight: "8pt" }} />
+          Projekte & Erfahrung
+        </h2>
 
         <div className="job-entry">
           <div className="job-header">
@@ -425,7 +445,10 @@ const CVPrintComponent = () => {
 
       {/* Technische Fähigkeiten */}
       <div className="section">
-        <h2>Technische Fähigkeiten</h2>
+        <h2>
+          <FiTool size={16} style={{ display: "inline", marginRight: "8pt" }} />
+          Technische Fähigkeiten
+        </h2>
         <div className="skills-grid">
           <div className="skill-category">
             <h3>Frontend</h3>
@@ -470,7 +493,13 @@ const CVPrintComponent = () => {
 
       {/* Sprachen */}
       <div className="section">
-        <h2>Sprachen</h2>
+        <h2>
+          <Languages
+            size={16}
+            style={{ display: "inline", marginRight: "8pt" }}
+          />
+          Sprachen
+        </h2>
         <div className="language-grid">
           <div className="language-item">
             <span>Deutsch</span>
@@ -493,7 +522,10 @@ const CVPrintComponent = () => {
 
       {/* Persönliche Stärken */}
       <div className="section">
-        <h2>Persönliche Stärken</h2>
+        <h2>
+          <Award size={16} style={{ display: "inline", marginRight: "8pt" }} />
+          Persönliche Stärken
+        </h2>
         <div className="strengths-grid">
           <div className="strength-item">
             <div className="strength-title">Innovationsfreude</div>
