@@ -1,8 +1,9 @@
 "use client";
 
-import { ChevronDown } from "lucide-react";
+import { MdKeyboardArrowDown as ChevronDown } from "react-icons/md";
 import { BackgroundVideo } from "@/components/background-video";
 import { ProjectsSection } from "@/components/projects-section";
+import { LuFileUser, LuSquareArrowOutUpRight } from "react-icons/lu";
 
 export default function HomePage() {
   return (
@@ -12,7 +13,7 @@ export default function HomePage() {
         aria-labelledby="hero-heading"
         role="banner"
       >
-        <div className="container grid items-center h-full pt-[70px]">
+        <div className="container grid items-center h-full">
           <BackgroundVideo />
           <div
             className="absolute top-0 left-0 w-full h-screen bg-black/20 dark:bg-black/20 light:bg-white/30 -z-[5]"
@@ -41,6 +42,19 @@ export default function HomePage() {
                 <br />
                 <span className="text-yellow-green not-italic">developer</span>
               </span>
+            </div>
+
+            <div className="w-full sm:w-[250px]">
+              <a
+                href="/lebenslauf-print"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center gap-3 py-3.5 px-6 text-white/90 no-underline rounded-lg bg-gradient-to-r from-purple/20 to-yellow-green/20 border border-white/20 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] font-medium text-[0.95rem] relative overflow-hidden backdrop-blur-sm hover:text-white hover:bg-gradient-to-r hover:from-purple/30 hover:to-yellow-green/30 hover:border-white/30 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(161,150,223,0.25),0_6px_15px_rgba(144,212,145,0.15)] active:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-purple focus:ring-offset-2 focus:ring-offset-transparent"
+                aria-label="Lebenslauf als PDF öffnen"
+              >
+                <span>Lebenslauf ansehen</span>
+                <LuSquareArrowOutUpRight />
+              </a>
             </div>
           </div>
 

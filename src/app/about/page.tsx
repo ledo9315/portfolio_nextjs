@@ -2,22 +2,22 @@
 
 import { TechCategory } from "@/components/tech-category";
 import {
-  Box,
-  Database,
-  File,
-  Globe,
-  Layers,
-  Palette,
-  Server,
-  SwatchBook,
-  Wrench,
-  Users,
-  Target,
-  MapPin,
-  GraduationCap,
-  Code,
-  Heart,
-} from "lucide-react";
+  MdInventory as Box,
+  MdStorage as Database,
+  MdInsertDriveFile as File,
+  MdLanguage as Globe,
+  MdLayers as Layers,
+  MdPalette as Palette,
+  MdDeveloperBoard as Server,
+  MdColorLens as SwatchBook,
+  MdBuild as Wrench,
+  MdGroup as Users,
+  MdGpsFixed as Target,
+  MdLocationOn as MapPin,
+  MdSchool as GraduationCap,
+  MdCode as Code,
+  MdFavorite as Heart,
+} from "react-icons/md";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { RefreshCw, Home } from "lucide-react";
+import { MdRefresh as RefreshCw, MdHome as Home } from "react-icons/md";
 
 export default function Error({
   error,

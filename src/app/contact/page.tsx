@@ -2,7 +2,7 @@
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
-import { LoaderCircle } from "lucide-react";
+import { MdRefresh as LoaderCircle } from "react-icons/md";
 import { Button } from "@/components/button";
 import { motion } from "framer-motion";
 

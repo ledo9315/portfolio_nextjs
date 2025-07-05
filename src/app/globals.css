@@ -277,4 +277,31 @@
       border-color: rgba(255, 255, 255, 0.6);
     }
   }
+
+  /* Print styles für PDF-Export */
+  @media print {
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+
+    .cv-print-container {
+      margin: 0 !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      max-width: none !important;
+      width: 100% !important;
+      background: white !important;
+      color: black !important;
+    }
+
+    .print-hide {
+      display: none !important;
+    }
+
+    * {
+      -webkit-print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+  }
 }
