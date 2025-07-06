@@ -22,6 +22,14 @@ const nextConfig = {
         source: "/(.*)",
         headers: [
           {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+          {
+            key: "X-DNS-Prefetch-Control",
+            value: "on",
+          },
+          {
             key: "X-Frame-Options",
             value: "DENY",
           },
@@ -35,7 +43,17 @@ const nextConfig = {
           },
           {
             key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=()",
+            value:
+              "camera=(), microphone=(), geolocation=(), payment=(), bluetooth=(), usb=(), picture-in-picture=(self), fullscreen=(self)",
+          },
+          {
+            source: "/_next/static/(.*)",
+            headers: [
+              {
+                key: "Cache-Control",
+                value: "public, max-age=31536000, immutable",
+              },
+            ],
           },
         ],
       },

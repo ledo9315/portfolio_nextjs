@@ -5,7 +5,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/header";
 import { Footer } from "@/components/footer";
 import "./globals.css";
-import { CustomCursor } from "@/components/custom-cursor";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Leonid Domahalskyy Portfolio",
     images: [
       {
-        url: "https://www.leonid-domahalskyy.de/img/og-image.jpg",
+        url: "https://www.leonid-domahalskyy.de/img/preview.jpg",
         width: 1200,
         height: 630,
         alt: "Leonid Domahalskyy Portfolio",
@@ -63,7 +62,7 @@ export const metadata: Metadata = {
     description:
       "Fullstack Developer & UI/UX Designer aus Flensburg für ansprechende und moderne Webseiten.",
     creator: "@leonid_dev",
-    images: ["https://www.leonid-domahalskyy.de/img/og-image.jpg"],
+    images: ["https://www.leonid-domahalskyy.de/img/preview.jpg"],
   },
   robots: {
     index: true,
@@ -155,7 +154,6 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#a196df" />
         <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
         <meta name="theme-color" content="#a196df" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a196df" />
         <link rel="canonical" href="https://www.leonid-domahalskyy.de" />
 
         {/* DNS Prefetch for external resources */}

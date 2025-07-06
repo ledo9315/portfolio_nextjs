@@ -15,3 +15,19 @@ Crawl-delay: 0
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
+
+# Block AI training crawlers (optional)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
