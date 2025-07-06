@@ -29,9 +29,9 @@ const projects: Project[] = [
     title: "Metropol Theater",
     description: "Webseite, Branding, Kino-Design",
     text: "Im Studium habe ich im Rahmen des Moduls «WWW-Programmierung» eine Fullstack-Webseite für das Metropol-Theater entwickelt. Die Webseite bietet einen Überblick über aktuelle und kommende Filme, Vorstellungszeiten sowie Informationen zum Kino selbst. Zudem verfügt sie über einen Dashboard-Bereich, der es ermöglicht, Filme zu verwalten und das Programm effizient zu aktualisieren.",
-    keywords: "Deno, Oak, SQLite, Nunjucks",
-    websiteUrl: "#",
-    linkText: "Link zur Webseite",
+    keywords: "Kirby CMS",
+    websiteUrl: "https://github.com/ledo9315/metropol_kirby",
+    linkText: "Link zum GitHub Repository",
     images: {
       thumbnail: "/img/project-metropol/thumbnail.webp",
       cover: "/img/project-metropol/thumbnail.webp",
