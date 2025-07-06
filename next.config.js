@@ -59,6 +59,15 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/defaultsite",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
   // Optimierte Bundle-Analyse
   webpack: (config, { isServer }) => {
     if (!isServer) {
