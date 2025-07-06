@@ -8,7 +8,7 @@ const projects: Project[] = [
     text: `Taskify ist eine Todo-App zum Verwalten von Aufgaben. Entwickelt wurde die App mit Next.js.`,
     keywords: "Next.js, SQLite, Drizzle ORM, React Hook Form, TanStack Query",
     linkText: "Link zur Webseite",
-    websiteUrl: "https://taskify.leonid-domahalskyy.com/de/landing",
+    websiteUrl: "https://taskify.software/de/landing",
     images: {
       cover: "/img/project-taskify/Frame-7.jpeg",
       thumbnail: "/img/project-taskify/thumbnail.jpg",
@@ -133,7 +133,7 @@ Feinarbeit, richtet die Türme aus und sorgt dafür, dass jedes Korn rechtzeitig
     linkText: "Zum GitHub Repository",
     websiteUrl: "https://github.com/ledo9315/capture_the_campus",
     images: {
-      cover: "/img/project-capture-the-campus/thumbnail.jpeg",
+      cover: "/img/project-capture-the-campus/Frame-1.webp",
       frames: [
         {
           src: "/img/project-capture-the-campus/Frame-1.webp",

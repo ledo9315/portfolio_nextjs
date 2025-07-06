@@ -277,12 +277,9 @@ function AboutContent() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-4xl mx-auto text-center"
           >
-            <div className="inline-flex items-center gap-3 mb-8">
-              <Heart className="w-6 h-6 text-purple" />
-              <h2 className="text-2xl md:text-3xl font-hanson font-bold uppercase tracking-tight">
-                Was mich antreibt
-              </h2>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-hanson font-bold uppercase tracking-tight">
+              Was mich antreibt
+            </h2>
             <p className="text-lg leading-relaxed text-white/80 mb-8">
               Diese Balance zwischen technischer Perfektion und kreativem Design
               - das ist es, was mich jeden Tag aufs Neue fasziniert. Es ist wie
@@ -324,10 +321,10 @@ function AboutContent() {
                     }}
                     className="text-left"
                   >
-                    <h3 className="text-xl font-semibold mb-4 text-purple">
+                    <h3 className="text-xl text-center font-semibold mb-4 text-purple">
                       {item.title}
                     </h3>
-                    <p className="text-white/70 leading-relaxed">
+                    <p className="text-white/70 text-center leading-relaxed">
                       {item.description}
                     </p>
                   </motion.div>
