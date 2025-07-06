@@ -130,7 +130,7 @@ Feinarbeit, richtet die Türme aus und sorgt dafür, dass jedes Korn rechtzeitig
     description: "Android App, Gamification",
     text: `Capture the Campus ist eine Android-App für das Sammeln virtueller Punkte an verschiedenen Campus-Standorten. Die App nutzt GPS-Tracking und zeigt eine interaktive Campuskarte mit allen verfügbaren Sammelpunkten. Spieler können ihre Fortschritte verfolgen und sich in einer Highscore-Liste mit anderen messen. Entwickelt wurde die App mit Kotlin unter Verwendung der Android Location Services und Material Design.`,
     keywords: "Kotlin, Android, Geolocation, Material Design",
-    linkText: "Zum GitHub Repository",
+    linkText: "Link zum GitHub Repository",
     websiteUrl: "https://github.com/ledo9315/capture_the_campus",
     images: {
       cover: "/img/project-capture-the-campus/Frame-1.webp",

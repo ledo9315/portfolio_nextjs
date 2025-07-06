@@ -5,7 +5,7 @@ interface Project {
   text: string;
   keywords: string;
   websiteUrl?: string;
-  linkText: string;
+  linkText: "Link zur Webseite" | "Link zum GitHub Repository";
   images: {
     thumbnail?: string;
     cover: string;
