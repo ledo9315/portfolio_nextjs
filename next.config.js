@@ -46,14 +46,14 @@ const nextConfig = {
             value:
               "camera=(), microphone=(), geolocation=(), payment=(), bluetooth=(), usb=(), picture-in-picture=(self), fullscreen=(self)",
           },
+        ],
+      },
+      {
+        source: "/_next/static/(.*)",
+        headers: [
           {
-            source: "/_next/static/(.*)",
-            headers: [
-              {
-                key: "Cache-Control",
-                value: "public, max-age=31536000, immutable",
-              },
-            ],
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
           },
         ],
       },
