@@ -6,7 +6,20 @@ const projects: Project[] = [
     title: "Taskify",
     description: "Web-App, Todo-App",
     text: `Taskify ist eine Todo-App zum Verwalten von Aufgaben. Entwickelt wurde die App mit Next.js.`,
-    keywords: "Next.js, SQLite, Drizzle ORM, React Hook Form, TanStack Query",
+    keywords: [
+      "Next.js",
+      "PostgreSQL",
+      "Neon",
+      "Drizzle ORM",
+      "React Hook Form",
+      "TanStack Query",
+      "Zustand",
+      "Better-Auth",
+      "Drizzle ORM",
+      "Shadcn UI",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
     linkText: "Link zur Webseite",
     websiteUrl: "https://taskify.software/de/landing",
     images: {
@@ -29,7 +42,7 @@ const projects: Project[] = [
     title: "Metropol Theater",
     description: "Webseite, Branding, Kino-Design",
     text: "Im Studium habe ich im Rahmen des Moduls «WWW-Programmierung» eine Fullstack-Webseite für das Metropol-Theater entwickelt. Die Webseite bietet einen Überblick über aktuelle und kommende Filme, Vorstellungszeiten sowie Informationen zum Kino selbst. Zudem verfügt sie über einen Dashboard-Bereich, der es ermöglicht, Filme zu verwalten und das Programm effizient zu aktualisieren.",
-    keywords: "Kirby CMS",
+    keywords: ["Kirby CMS"],
     websiteUrl: "https://github.com/ledo9315/metropol_kirby",
     linkText: "Link zum GitHub Repository",
     images: {
@@ -61,7 +74,18 @@ const projects: Project[] = [
     title: "Angela's Dance Academy",
     description: "Visuelle Identität, Branding, Logotype, Webseite",
     text: "Im Rahmen dieses Projekts habe ich meine Fähigkeiten in HTML und CSS genutzt, um eine dynamische und ansprechende Webseite für Angela's Dance Academy zu entwickeln. Die Webseite ist darauf ausgelegt, die Begeisterung und das Talent für Tanz in einer einzigartigen Weise zu präsentieren.",
-    keywords: "HTML, SCSS",
+    keywords: [
+      "Next.js",
+      "PostgreSQL",
+      "Neon",
+      "Prisma ORM",
+      "React Hook Form",
+      "Better-Auth",
+      "Prisma",
+      "Shadcn UI",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
     websiteUrl: "https://www.angelasdanceacademy.com/",
     linkText: "Link zur Webseite",
     images: {
@@ -101,7 +125,7 @@ Das Geheimnis zum Erfolg liegt in der Zusammenarbeit: Der PC-Spieler platziert
 und verbessert verschiedene Türme – Mikrowelle, Ofen und Kühlschrank – und 
 sammelt das auf der Map erscheinende Geld ein. Der VR-Spieler übernimmt die 
 Feinarbeit, richtet die Türme aus und sorgt dafür, dass jedes Korn rechtzeitig ploppt.`,
-    keywords: "Unity, C#",
+    keywords: ["Unity", "C#"],
     websiteUrl: "https://github.com/ledo9315/tower_buddys",
     linkText: "Link zum GitHub Repository",
     video: {
@@ -129,7 +153,7 @@ Feinarbeit, richtet die Türme aus und sorgt dafür, dass jedes Korn rechtzeitig
     title: "Capture the Campus",
     description: "Android App, Gamification",
     text: `Capture the Campus ist eine Android-App für das Sammeln virtueller Punkte an verschiedenen Campus-Standorten. Die App nutzt GPS-Tracking und zeigt eine interaktive Campuskarte mit allen verfügbaren Sammelpunkten. Spieler können ihre Fortschritte verfolgen und sich in einer Highscore-Liste mit anderen messen. Entwickelt wurde die App mit Kotlin unter Verwendung der Android Location Services und Material Design.`,
-    keywords: "Kotlin, Android, Geolocation, Material Design",
+    keywords: ["Kotlin", "Android", "Geolocation", "Material Design"],
     linkText: "Link zum GitHub Repository",
     websiteUrl: "https://github.com/ledo9315/capture_the_campus",
     images: {

@@ -3,7 +3,7 @@ interface Project {
   title: string;
   description: string;
   text: string;
-  keywords: string;
+  keywords: string[];
   websiteUrl?: string;
   linkText: "Link zur Webseite" | "Link zum GitHub Repository";
   images: {

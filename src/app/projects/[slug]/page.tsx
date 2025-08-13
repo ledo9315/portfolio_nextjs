@@ -38,21 +38,30 @@ export default async function ProjectDetailPage({
                 {project.title}
               </h1>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={0.2}>
               <p className="text-white/60 font-medium mb-5">
                 {project.description}
               </p>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={0.3}>
               <p className="mb-5 text-base font-medium leading-7">
                 {project.text}
               </p>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={0.4}>
-              <p className="italic mb-5 font-medium">{project.keywords}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.keywords.map((keyword) => (
+                  <div
+                    key={keyword}
+                    className="bg-white text-black px-2 py-0.5 rounded-sm w-fit text-sm font-medium mb-5"
+                  >
+                    {keyword}
+                  </div>
+                ))}
+              </div>
             </AnimatedSection>
 
             {/* Website Link */}
