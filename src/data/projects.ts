@@ -73,7 +73,7 @@ const projects: Project[] = [
     slug: "angelas-dance-academy",
     title: "Angela's Dance Academy",
     description: "Visuelle Identität, Branding, Logotype, Webseite",
-    text: "Im Rahmen dieses Projekts habe ich meine Fähigkeiten in HTML und CSS genutzt, um eine dynamische und ansprechende Webseite für Angela's Dance Academy zu entwickeln. Die Webseite ist darauf ausgelegt, die Begeisterung und das Talent für Tanz in einer einzigartigen Weise zu präsentieren.",
+    text: "Im Rahmen dieses Projekts habe ich eine dynamische und ansprechende Webseite für Angela's Dance Academy zu entwickelt.",
     keywords: [
       "Next.js",
       "PostgreSQL",
