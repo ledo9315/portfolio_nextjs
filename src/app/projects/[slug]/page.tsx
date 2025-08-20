@@ -52,11 +52,11 @@ export default async function ProjectDetailPage({
             </AnimatedSection>
 
             <AnimatedSection delay={0.4}>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-5">
                 {project.keywords.map((keyword) => (
                   <div
                     key={keyword}
-                    className="bg-white text-black px-2 py-0.5 rounded-sm w-fit text-sm font-medium mb-5"
+                    className="bg-white text-black px-2 py-0.5 rounded-sm w-fit text-sm font-medium"
                   >
                     {keyword}
                   </div>
