@@ -288,7 +288,7 @@ function AboutContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               {[
                 {
-                  title: "Technische Exzellenz",
+                  title: "Sauberer Code",
                   description:
                     "Code muss nicht nur funktionieren - er muss sauber, wartbar und performant sein. Das ist für mich keine Option, sondern Standard.",
                   delay: 0.2,
@@ -363,7 +363,25 @@ function AboutContent() {
           <div className="tech-categories grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-12 md:gap-16">
             {[
               {
-                title: "Frontend Frameworks",
+                title: "Design & UX",
+                icon: <SwatchBook />,
+                technologies: [
+                  { name: "Figma", level: "Expert", type: "expert" as const },
+                  {
+                    name: "UI/UX Design",
+                    level: "Advanced",
+                    type: "advanced" as const,
+                  },
+                  {
+                    name: "Prototyping",
+                    level: "Intermediate",
+                    type: "intermediate" as const,
+                  },
+                ],
+                delay: 0.1,
+              },
+              {
+                title: "Frontend Technologies",
                 icon: <Layers />,
                 technologies: [
                   {
@@ -386,13 +404,8 @@ function AboutContent() {
                     level: "Advanced",
                     type: "advanced" as const,
                   },
-                  {
-                    name: "Vite",
-                    level: "Advanced",
-                    type: "advanced" as const,
-                  },
                 ],
-                delay: 0.1,
+                delay: 0.2,
               },
               {
                 title: "Styling & UI Components",
@@ -409,17 +422,17 @@ function AboutContent() {
                     type: "expert" as const,
                   },
                   {
+                    name: "shadcn/ui",
+                    level: "Expert",
+                    type: "expert" as const,
+                  },
+                  {
                     name: "Bootstrap",
                     level: "Advanced",
                     type: "advanced" as const,
                   },
-                  {
-                    name: "shadcn/ui",
-                    level: "Advanced",
-                    type: "advanced" as const,
-                  },
                 ],
-                delay: 0.2,
+                delay: 0.3,
               },
               {
                 title: "State & Data Management",
@@ -445,8 +458,13 @@ function AboutContent() {
                     level: "Intermediate",
                     type: "intermediate" as const,
                   },
+                  {
+                    name: "Zod",
+                    level: "Intermediate",
+                    type: "intermediate" as const,
+                  },
                 ],
-                delay: 0.3,
+                delay: 0.4,
               },
               {
                 title: "Backend & Runtime",
@@ -463,6 +481,11 @@ function AboutContent() {
                     type: "advanced" as const,
                   },
                   {
+                    name: "Better-Auth",
+                    level: "Advanced",
+                    type: "advanced" as const,
+                  },
+                  {
                     name: "Deno",
                     level: "Intermediate",
                     type: "intermediate" as const,
@@ -472,8 +495,13 @@ function AboutContent() {
                     level: "Intermediate",
                     type: "intermediate" as const,
                   },
+                  {
+                    name: "Stripe",
+                    level: "Intermediate",
+                    type: "intermediate" as const,
+                  },
                 ],
-                delay: 0.4,
+                delay: 0.5,
               },
               {
                 title: "Database & ORM",
@@ -505,7 +533,34 @@ function AboutContent() {
                     type: "intermediate" as const,
                   },
                 ],
-                delay: 0.5,
+                delay: 0.6,
+              },
+              {
+                title: "Content Management",
+                icon: <File />,
+                technologies: [
+                  {
+                    name: "WordPress",
+                    level: "Advanced",
+                    type: "advanced" as const,
+                  },
+                  {
+                    name: "Elementor",
+                    level: "Advanced",
+                    type: "advanced" as const,
+                  },
+                  {
+                    name: "Kirby CMS",
+                    level: "Intermediate",
+                    type: "intermediate" as const,
+                  },
+                  {
+                    name: "Payload CMS",
+                    level: "Intermediate",
+                    type: "intermediate" as const,
+                  },
+                ],
+                delay: 0.7,
               },
               {
                 title: "Tools & Deployment",
@@ -517,42 +572,17 @@ function AboutContent() {
                     type: "advanced" as const,
                   },
                   {
+                    name: "Vite",
+                    level: "Advanced",
+                    type: "advanced" as const,
+                  },
+                  {
                     name: "Vercel",
                     level: "Advanced",
                     type: "advanced" as const,
                   },
                   {
-                    name: "Better-Auth",
-                    level: "Intermediate",
-                    type: "intermediate" as const,
-                  },
-                ],
-                delay: 0.6,
-              },
-              {
-                title: "Content Management",
-                icon: <File />,
-                technologies: [
-                  {
-                    name: "Kirby CMS",
-                    level: "Intermediate",
-                    type: "intermediate" as const,
-                  },
-                ],
-                delay: 0.7,
-              },
-              {
-                title: "Design & UX",
-                icon: <SwatchBook />,
-                technologies: [
-                  { name: "Figma", level: "Expert", type: "expert" as const },
-                  {
-                    name: "UI/UX Design",
-                    level: "Advanced",
-                    type: "advanced" as const,
-                  },
-                  {
-                    name: "Prototyping",
+                    name: "Docker",
                     level: "Intermediate",
                     type: "intermediate" as const,
                   },

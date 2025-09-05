@@ -451,41 +451,50 @@ const CVPrintComponent = () => {
         </h2>
         <div className="skills-grid">
           <div className="skill-category">
-            <h3>Frontend</h3>
+            <h3>Frontend Technologies</h3>
             <ul className="skill-list">
               <li>• React, Next.js</li>
               <li>• TypeScript, JavaScript</li>
               <li>• CSS3, SCSS, Tailwind CSS</li>
-              <li>• HTML5</li>
-              <li>• Vite, Bootstrap</li>
-              <li>• Framer Motion</li>
+              <li>• shadcn/ui, Bootstrap</li>
             </ul>
           </div>
           <div className="skill-category">
-            <h3>Backend & Database</h3>
+            <h3>State & Data Management</h3>
+            <ul className="skill-list">
+              <li>• TanStack Query, Zustand</li>
+              <li>• React Hook Form</li>
+              <li>• Redux Toolkit, Zod</li>
+            </ul>
+          </div>
+          <div className="skill-category">
+            <h3>Backend & Runtime</h3>
             <ul className="skill-list">
               <li>• Node.js, Express.js</li>
+              <li>• Better-Auth (Advanced), Deno, Oak</li>
+              <li>• Stripe</li>
+            </ul>
+          </div>
+          <div className="skill-category">
+            <h3>Database & ORM</h3>
+            <ul className="skill-list">
               <li>• PostgreSQL, MySQL, SQLite</li>
               <li>• Drizzle ORM, Prisma</li>
-              <li>• Deno, Oak</li>
+            </ul>
+          </div>
+          <div className="skill-category">
+            <h3>Content Management</h3>
+            <ul className="skill-list">
+              <li>• WordPress, Elementor</li>
+              <li>• Kirby CMS, Payload CMS</li>
             </ul>
           </div>
           <div className="skill-category">
             <h3>Tools & Deployment</h3>
             <ul className="skill-list">
-              <li>• Git & GitHub</li>
-              <li>• Vercel</li>
-              <li>• Figma</li>
-              <li>• Better-Auth</li>
-            </ul>
-          </div>
-          <div className="skill-category">
-            <h3>State Management</h3>
-            <ul className="skill-list">
-              <li>• TanStack Query</li>
-              <li>• Zustand</li>
-              <li>• React Hook Form</li>
-              <li>• Redux Toolkit</li>
+              <li>• Git & GitHub, Vite</li>
+              <li>• Vercel, Docker</li>
+              <li>• Figma, UI/UX Design</li>
             </ul>
           </div>
         </div>
@@ -503,7 +512,7 @@ const CVPrintComponent = () => {
         <div className="language-grid">
           <div className="language-item">
             <span>Deutsch</span>
-            <span>Deutsch</span>
+            <span>Fließend (C2)</span>
           </div>
           <div className="language-item">
             <span>Ukrainisch</span>
@@ -549,7 +558,7 @@ const CVPrintComponent = () => {
             </div>
           </div>
           <div className="strength-item">
-            <div className="strength-title">Technische Exzellenz</div>
+            <div className="strength-title">Sauberer Code</div>
             <div className="strength-desc">
               Sauberer, wartbarer und performanter Code ist für mich Standard.
             </div>
