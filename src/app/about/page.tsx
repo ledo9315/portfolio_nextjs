@@ -385,6 +385,21 @@ function AboutContent() {
                 icon: <Layers />,
                 technologies: [
                   {
+                    name: "JavaScript",
+                    level: "Advanced",
+                    type: "advanced" as const,
+                  },
+                  {
+                    name: "TypeScript",
+                    level: "Advanced",
+                    type: "advanced" as const,
+                  },
+                  {
+                    name: "PHP",
+                    level: "Advanced",
+                    type: "advanced" as const,
+                  },
+                  {
                     name: "React",
                     level: "Advanced",
                     type: "advanced" as const,
@@ -395,12 +410,7 @@ function AboutContent() {
                     type: "advanced" as const,
                   },
                   {
-                    name: "TypeScript",
-                    level: "Advanced",
-                    type: "advanced" as const,
-                  },
-                  {
-                    name: "JavaScript",
+                    name: "Livewire",
                     level: "Advanced",
                     type: "advanced" as const,
                   },
@@ -481,19 +491,19 @@ function AboutContent() {
                     type: "advanced" as const,
                   },
                   {
-                    name: "Better-Auth",
+                    name: "Laravel",
                     level: "Advanced",
                     type: "advanced" as const,
                   },
                   {
-                    name: "Deno",
-                    level: "Intermediate",
-                    type: "intermediate" as const,
+                    name: "Oak",
+                    level: "Advanced",
+                    type: "advanced" as const,
                   },
                   {
-                    name: "Oak",
-                    level: "Intermediate",
-                    type: "intermediate" as const,
+                    name: "Better-Auth",
+                    level: "Advanced",
+                    type: "advanced" as const,
                   },
                   {
                     name: "Stripe",
@@ -545,8 +555,8 @@ function AboutContent() {
                     type: "advanced" as const,
                   },
                   {
-                    name: "Elementor",
-                    level: "Advanced",
+                    name: "Statamic",
+                    level: "Intermediate",
                     type: "advanced" as const,
                   },
                   {
