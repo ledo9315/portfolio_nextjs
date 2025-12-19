@@ -313,11 +313,54 @@ const CVPrintComponent = () => {
 
         <div className="job-entry">
           <div className="job-header">
+            <div className="job-title">Fullstack Webentwickler</div>
+            <div className="job-date">10.2025 - heute</div>
+          </div>
+          <div className="job-company">Pingu Solutions</div>
+          <div className="job-description">
+            • Konzeption und Entwicklung von Webanwendungen
+            <br />
+            • Fullstack-Entwicklung mit Laravel, Livewire und React
+            <br />• Deployment und Server-Management
+          </div>
+          <div className="job-tech">
+            PHP, JavaScript, Laravel, React, Livewire, Statamic, Docker, Git
+            Laravel Forge
+          </div>
+        </div>
+
+        <div className="job-entry">
+          <div className="job-header">
+            <div className="job-title">Projekte im Bereich Webentwicklung</div>
+            <div className="job-date">06.2023 - Heute</div>
+          </div>
+          <div className="job-company">Für Kunden und Eigenprojekte</div>
+          <div className="job-description">
+            <strong>Konzeption und Design:</strong>
+            <br />
+            • Kund:innen-Briefing, Ziele und Zielgruppendefinition <br />
+            • Wireframes und Informationsarchitektur
+            <br />
+            • Styleguides
+            <br />
+            <br />
+            <strong>Technische Umsetzung:</strong>
+            <br />• Entwicklung mit Next.js, Node, Deno, React, TypeScript und
+            Tailwind CSS <br />
+            • Backend-Logik, Datenbanken (SQL) und API-Anbindungen
+            <br />
+            • CMS-Entwicklung mit WordPress oder Kirby CMS
+            <br />
+          </div>
+        </div>
+
+        <div className="job-entry">
+          <div className="job-header">
             <div className="job-title">Job-Coach</div>
             <div className="job-date">03.2023 - 01.2025</div>
           </div>
           <div className="job-company">
-            Deutsche Angestellten Akademie - DAA · Teilzeit
+            Deutsche Angestellten Akademie - DAA · Werkstudent
           </div>
           <div className="job-description">
             • Beratung und Betreuung von Arbeitssuchenden
@@ -329,16 +372,15 @@ const CVPrintComponent = () => {
 
         <div className="job-entry">
           <div className="job-header">
-            <div className="job-title">Sprachmittler</div>
-            <div className="job-date">03.2023 - 09.2023</div>
+            <div className="job-title">Freelancer Webentwickler & Designer</div>
+            <div className="job-date">05.2023 - 09.2023</div>
           </div>
-          <div className="job-company">Hochschule Flensburg · Teilzeit</div>
+          <div className="job-company">GYFF · Freiberuflich</div>
           <div className="job-description">
-            • Übersetzung und Dolmetschen für Studierende und Mitarbeiter
+            • Kundenbriefings und Zieldefinition
             <br />
-            • Unterstützung bei der Kommunikation zwischen verschiedenen
-            Sprachen
-            <br />• Betreuung internationaler Studierender
+            • Wireframes und Informationsarchitektur
+            <br />• Ausarbeitung von Styleguides und responsiven UI-Designs
           </div>
         </div>
 
@@ -381,7 +423,7 @@ const CVPrintComponent = () => {
       <div className="section">
         <h2>
           <Code size={16} style={{ display: "inline", marginRight: "8pt" }} />
-          Projekte & Erfahrung
+          Private Projekte & Erfahrung
         </h2>
 
         <div className="job-entry">
@@ -437,7 +479,7 @@ const CVPrintComponent = () => {
           <div className="job-company">Frontend Development & Design</div>
           <div className="job-description">
             Entwicklung einer dynamischen Website mit fokus auf Branding und
-            visueller Identität. Responsives Design und moderne Animationen.
+            visueller Identität.
           </div>
           <div className="job-tech">HTML, SCSS</div>
         </div>
@@ -453,8 +495,11 @@ const CVPrintComponent = () => {
           <div className="skill-category">
             <h3>Frontend Technologies</h3>
             <ul className="skill-list">
-              <li>• React, Next.js</li>
-              <li>• TypeScript, JavaScript</li>
+              <li>• JavaScript, TypeScript</li>
+              <li>• PHP</li>
+              <li>• React</li>
+              <li>• Next.js</li>
+              <li>• Livewire</li>
               <li>• CSS3, SCSS, Tailwind CSS</li>
               <li>• shadcn/ui, Bootstrap</li>
             </ul>
@@ -464,14 +509,17 @@ const CVPrintComponent = () => {
             <ul className="skill-list">
               <li>• TanStack Query, Zustand</li>
               <li>• React Hook Form</li>
-              <li>• Redux Toolkit, Zod</li>
+              <li>• Zod</li>
+              <li>• Redux Toolkit</li>
             </ul>
           </div>
           <div className="skill-category">
             <h3>Backend & Runtime</h3>
             <ul className="skill-list">
               <li>• Node.js, Express.js</li>
-              <li>• Better-Auth (Advanced), Deno, Oak</li>
+              <li>• Laravel</li>
+              <li>• Deno, OAK</li>
+              <li>• Better-Auth</li>
               <li>• Stripe</li>
             </ul>
           </div>
@@ -479,22 +527,26 @@ const CVPrintComponent = () => {
             <h3>Database & ORM</h3>
             <ul className="skill-list">
               <li>• PostgreSQL, MySQL, SQLite</li>
-              <li>• Drizzle ORM, Prisma</li>
+              <li>• Drizzle ORM, Prisma, Eloquent</li>
             </ul>
           </div>
           <div className="skill-category">
             <h3>Content Management</h3>
             <ul className="skill-list">
               <li>• WordPress, Elementor</li>
-              <li>• Kirby CMS, Payload CMS</li>
+              <li>• Statamic</li>
+              <li>• Kirby CMS</li>
+              <li>• Payload CMS</li>
             </ul>
           </div>
           <div className="skill-category">
             <h3>Tools & Deployment</h3>
             <ul className="skill-list">
-              <li>• Git & GitHub, Vite</li>
-              <li>• Vercel, Docker</li>
-              <li>• Figma, UI/UX Design</li>
+              <li>• Git & GitHub</li>
+              <li>• Vite</li>
+              <li>• Vercel</li>
+              <li>• Docker</li>
+              <li>• Figma</li>
             </ul>
           </div>
         </div>
@@ -515,16 +567,16 @@ const CVPrintComponent = () => {
             <span>Fließend (C2)</span>
           </div>
           <div className="language-item">
+            <span>Englisch</span>
+            <span>Gut (B1)</span>
+          </div>
+          <div className="language-item">
             <span>Ukrainisch</span>
             <span>Muttersprache</span>
           </div>
           <div className="language-item">
             <span>Russisch</span>
             <span>Fließend (C2)</span>
-          </div>
-          <div className="language-item">
-            <span>Englisch</span>
-            <span>Gut (B1)</span>
           </div>
         </div>
       </div>
