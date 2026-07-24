@@ -227,7 +227,7 @@ const CVPrintComponent = () => {
       <div className="section header">
         <div className="header-text">
           <h1>Leonid Domahalskyy</h1>
-          <div className="subtitle">Fullstack Developer & UI/UX Designer</div>
+          <div className="subtitle">Fullstack Webentwickler</div>
 
           <div className="contact-grid">
             <div className="contact-item">
@@ -248,8 +248,6 @@ const CVPrintComponent = () => {
             </div>
           </div>
         </div>
-        {/* ponytail: plain img — react-to-print clones the DOM, static path prints reliably */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="profile-photo"
           src="/img/profil_sw_2.jpg"
