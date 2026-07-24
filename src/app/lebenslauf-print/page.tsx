@@ -38,7 +38,7 @@ const CVPrintComponent = () => {
         }
         .cv-print h1 {
           font-family: "Hanson", Arial, sans-serif;
-          font-size: 24pt;
+          font-size: 21pt;
           font-weight: bold;
           text-transform: uppercase;
           margin-bottom: 8pt;
@@ -61,6 +61,23 @@ const CVPrintComponent = () => {
           font-weight: 600;
           font-size: 12pt;
           margin-bottom: 4pt;
+        }
+        .cv-print .header {
+          display: flex;
+          align-items: flex-start;
+          gap: 8pt;
+        }
+        .cv-print .header-text {
+          flex: 1;
+          min-width: 0;
+        }
+        .cv-print .profile-photo {
+          width: 45mm;
+          height: 57mm;
+          object-fit: cover;
+          object-position: 28% top;
+          border: 1pt solid #000;
+          flex-shrink: 0;
         }
         .cv-print .contact-grid {
           display: grid;
@@ -207,28 +224,37 @@ const CVPrintComponent = () => {
       `}</style>
 
       {/* Header */}
-      <div className="section">
-        <h1>Leonid Domahalskyy</h1>
-        <div className="subtitle">Fullstack Developer & UI/UX Designer</div>
+      <div className="section header">
+        <div className="header-text">
+          <h1>Leonid Domahalskyy</h1>
+          <div className="subtitle">Fullstack Developer & UI/UX Designer</div>
 
-        <div className="contact-grid">
-          <div className="contact-item">
-            <MapPin size={12} />
-            <span>Rude 13, 24941 Flensburg, Deutschland</span>
-          </div>
-          <div className="contact-item">
-            <Mail size={12} />
-            <span>leonid.domagalsky@gmail.com</span>
-          </div>
-          <div className="contact-item">
-            <Globe size={12} />
-            <span>www.leonid-domahalskyy.com</span>
-          </div>
-          <div className="contact-item">
-            <Phone size={12} />
-            <span>0176/41195609</span>
+          <div className="contact-grid">
+            <div className="contact-item">
+              <MapPin size={12} />
+              <span>Rude 13, 24941 Flensburg, Deutschland</span>
+            </div>
+            <div className="contact-item">
+              <Mail size={12} />
+              <span>leonid.domagalsky@gmail.com</span>
+            </div>
+            <div className="contact-item">
+              <Globe size={12} />
+              <span>www.leonid-domahalskyy.com</span>
+            </div>
+            <div className="contact-item">
+              <Phone size={12} />
+              <span>0176/41195609</span>
+            </div>
           </div>
         </div>
+        {/* ponytail: plain img — react-to-print clones the DOM, static path prints reliably */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="profile-photo"
+          src="/img/profil_sw_2.jpg"
+          alt="Portrait von Leonid Domahalskyy"
+        />
       </div>
 
       {/* Über mich */}
@@ -238,8 +264,10 @@ const CVPrintComponent = () => {
           Über mich
         </h2>
         <div className="about-text">
-          Ich komme aus Flensburg und studiere hier an der Hochschule
-          Medieninformatik. Meine Programmier-Kenntnisse habe ich durch
+          Ich komme aus Flensburg und habe hier an der Hochschule
+          Medieninformatik studiert. Aktuell setze ich mein Studium im Master
+          Angewandte Informatik mit Schwerpunkt Cybersecurity fort. Meine
+          Programmier-Kenntnisse habe ich durch
           kontinuierliches Lernen, praxisnahe Projekte und natürlich mein
           Studium aufgebaut. Was mich richtig begeistert ist die Kombination aus
           kreativem Design und sauberer Programmierung. Eine Website muss nicht
@@ -260,9 +288,22 @@ const CVPrintComponent = () => {
         <div className="job-entry">
           <div className="job-header">
             <div className="job-title">
+              Master of Science - Angewandte Informatik
+            </div>
+            <div className="job-date">2026 - heute</div>
+          </div>
+          <div className="job-company">Hochschule Flensburg</div>
+          <div className="job-description">
+            Schwerpunkt: Cybersecurity
+          </div>
+        </div>
+
+        <div className="job-entry">
+          <div className="job-header">
+            <div className="job-title">
               Bachelor of Science - Medieninformatik
             </div>
-            <div className="job-date">09.2022 - voraussichtlich 2025</div>
+            <div className="job-date">2022 - 2026</div>
           </div>
           <div className="job-company">Hochschule Flensburg</div>
           <div className="job-description">
@@ -314,7 +355,7 @@ const CVPrintComponent = () => {
         <div className="job-entry">
           <div className="job-header">
             <div className="job-title">Fullstack Webentwickler</div>
-            <div className="job-date">10.2025 - heute</div>
+            <div className="job-date">09.2025 - heute</div>
           </div>
           <div className="job-company">Pingu Solutions</div>
           <div className="job-description">
@@ -324,8 +365,7 @@ const CVPrintComponent = () => {
             <br />• Deployment und Server-Management
           </div>
           <div className="job-tech">
-            PHP, JavaScript, Laravel, React, Livewire, Statamic, Docker, Git
-            Laravel Forge
+            PHP, JavaScript, Laravel, React, Inertia, Vue, Livewire, Tailwind CSS, Statamic, Docker, Git, Github, Laravel Forge, Laravel Cloud, AWS, CI/CD, PEST, Testing, RESTful API, Deployment, Server-Management, MySQL, PostgreSQL
           </div>
         </div>
 
@@ -428,24 +468,52 @@ const CVPrintComponent = () => {
 
         <div className="job-entry">
           <div className="job-header">
-            <div className="job-title">Taskify - Todo-App</div>
-            <div className="job-date">2025</div>
+            <div className="job-title">Event Crawler - Event-Aggregator</div>
+            <div className="job-date">2026</div>
           </div>
           <div className="job-company">Fullstack Web-Entwicklung</div>
           <div className="job-description">
-            Entwicklung einer modernen Todo-App mit Next.js, SQLite und Drizzle
-            ORM. Implementierung von Benutzerauthentifizierung und responsive
-            Design.
+            Laravel-Anwendung, die Veranstaltungsseiten crawlt und Event-Daten
+            per KI-Service strukturiert extrahiert. Mehrstufige Job-Pipeline
+            (Crawl → URL-Discovery → Extraktion → Validierung → Anreicherung →
+            Veröffentlichung) über getrennte Queue-Kanäle, Deduplizierung per
+            Content-Hash, Geocoding der Veranstaltungsorte über die Google
+            Places API sowie ein Livewire-Dashboard mit Monitoring und
+            Activity-Feed.
           </div>
           <div className="job-tech">
-            Next.js, TypeScript, SQLite, Drizzle ORM, React Hook Form, TanStack
-            Query
+            PHP, Laravel 12, Livewire, PostgreSQL, Queues & Scheduler, Docker,
+            n8n, Google Places API, Tailwind CSS, Pest
           </div>
         </div>
 
         <div className="job-entry">
           <div className="job-header">
-            <div className="job-title">Metropol Theater Website</div>
+            <div className="job-title">
+              Daily Dev - Coding-Challenge-Plattform
+            </div>
+            <div className="job-date">2026</div>
+          </div>
+          <div className="job-company">Fullstack Web-Entwicklung</div>
+          <div className="job-description">
+            Plattform für tägliche Coding-Challenges: Nutzer:innen lösen
+            Aufgaben in JavaScript, TypeScript, Python oder PHP direkt im
+            Browser. Ausführung des Codes in einer isolierten
+            Docker-Sandbox (Piston) mit automatischer Bewertung über
+            Testfälle, dazu Monaco-Editor, Authentifizierung mit NextAuth,
+            Streaks, Achievements, Ranking-System sowie ein Admin-Bereich zur
+            Verwaltung der Challenges.
+          </div>
+          <div className="job-tech">
+            Next.js 16, React 19, TypeScript, PostgreSQL, Prisma, NextAuth v5,
+            Monaco Editor, Docker, Tailwind CSS, shadcn/ui, Framer Motion,
+            Vitest
+          </div>
+        </div>
+
+        <div className="job-entry">
+          <div className="job-header">
+            <div className="job-title">Metropol Theater</div>
             <div className="job-date">2025</div>
           </div>
           <div className="job-company">Fullstack Webentwicklung</div>
@@ -478,10 +546,10 @@ const CVPrintComponent = () => {
           </div>
           <div className="job-company">Frontend Development & Design</div>
           <div className="job-description">
-            Entwicklung einer dynamischen Website mit fokus auf Branding und
+            Entwicklung einer Website mit fokus auf Branding und
             visueller Identität.
           </div>
-          <div className="job-tech">HTML, SCSS</div>
+          <div className="job-tech">Next.js, Tailwind CSS</div>
         </div>
       </div>
 
@@ -546,6 +614,7 @@ const CVPrintComponent = () => {
               <li>• Vite</li>
               <li>• Vercel</li>
               <li>• Docker</li>
+              <li>• Pest, Vitest</li>
               <li>• Figma</li>
             </ul>
           </div>

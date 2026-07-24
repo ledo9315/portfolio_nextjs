@@ -72,11 +72,16 @@ function AboutContent() {
                     id="about-description"
                     className="text-lg leading-relaxed mb-6"
                   >
-                    Ich komme aus Flensburg und studiere hier an der Hochschule{" "}
+                    Ich komme aus Flensburg und habe hier an der Hochschule{" "}
                     <span className="font-semibold relative text-purple">
                       Medieninformatik
-                    </span>
-                    . Meine Programmier-Kenntnisse habe ich durch
+                    </span>{" "}
+                    studiert. Aktuell mache ich hier meinen Master in{" "}
+                    <span className="font-semibold relative text-purple">
+                      Angewandter Informatik
+                    </span>{" "}
+                    mit Schwerpunkt Cybersecurity. Meine Programmier-Kenntnisse
+                    habe ich durch
                     kontinuierliches Lernen, praxisnahe Projekte und natürlich
                     mein Studium aufgebaut. Was als Interesse begann, ist heute
                     meine komplette Leidenschaft.
@@ -135,7 +140,7 @@ function AboutContent() {
               {
                 icon: <GraduationCap className="w-5 h-5 text-purple" />,
                 title: "Was ich gerade mache",
-                description: "B.Sc. Medieninformatik",
+                description: "M.Sc. Angewandte Informatik\nSchwerpunkt Cybersecurity",
                 delay: 0.4,
               },
               {
