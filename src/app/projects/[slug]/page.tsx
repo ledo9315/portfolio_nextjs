@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import projects from "@/data/projects";
 import { Button } from "@/components/button";
 import { ProjectImagesGrid } from "@/components/project-images-grid";

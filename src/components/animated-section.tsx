@@ -1,14 +1,14 @@
 "use client";
 
-import { useRef, ReactNode } from "react";
-import { useInView } from "framer-motion";
+import { ReactNode } from "react";
+import { motion, HTMLMotionProps } from "framer-motion";
 
-interface AnimatedSectionProps {
+interface AnimatedSectionProps extends HTMLMotionProps<"div"> {
   children: ReactNode;
-  className?: string;
   delay?: number;
-  direction?: "up" | "down" | "left" | "right";
+  direction?: "up" | "down" | "left" | "right" | "none";
   distance?: number;
+  staggerChildren?: number;
 }
 
 export function AnimatedSection({
@@ -16,39 +16,59 @@ export function AnimatedSection({
   className = "",
   delay = 0,
   direction = "up",
-  distance = 80,
+  distance = 50,
+  staggerChildren = 0,
+  ...props
 }: AnimatedSectionProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  const getTransform = () => {
-    if (isInView) return "translate3d(0, 0, 0)";
-
+  const getInitialPosition = () => {
     switch (direction) {
       case "up":
-        return `translate3d(0, ${distance}px, 0)`;
+        return { y: distance };
       case "down":
-        return `translate3d(0, -${distance}px, 0)`;
+        return { y: -distance };
       case "left":
-        return `translate3d(${distance}px, 0, 0)`;
+        return { x: distance };
       case "right":
-        return `translate3d(-${distance}px, 0, 0)`;
+        return { x: -distance };
       default:
-        return `translate3d(0, ${distance}px, 0)`;
+        return {};
     }
   };
 
+  const variants = {
+    hidden: {
+      opacity: 0,
+      ...getInitialPosition(),
+      scale: direction === "none" ? 1 : 0.95,
+      filter: "blur(10px)",
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      scale: 1,
+      filter: "blur(0px)",
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100,
+        duration: 0.8,
+        delay,
+        staggerChildren: staggerChildren,
+      },
+    },
+  };
+
   return (
-    <div
-      ref={ref}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+      variants={variants}
       className={className}
-      style={{
-        opacity: isInView ? 1 : 0,
-        transform: getTransform(),
-        transition: `all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}s`,
-      }}
+      {...props}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

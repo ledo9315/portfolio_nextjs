@@ -240,7 +240,7 @@ const CVPrintComponent = () => {
             </div>
             <div className="contact-item">
               <Globe size={12} />
-              <span>www.leonid-domahalskyy.com</span>
+              <span>www.leonid-domahalskyy.de</span>
             </div>
             <div className="contact-item">
               <Phone size={12} />
