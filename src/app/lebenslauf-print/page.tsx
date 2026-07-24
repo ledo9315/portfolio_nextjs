@@ -370,7 +370,7 @@ const CVPrintComponent = () => {
         <div className="job-entry">
           <div className="job-header">
             <div className="job-title">Projekte im Bereich Webentwicklung</div>
-            <div className="job-date">06.2023 - Heute</div>
+            <div className="job-date">06.2023 - heute</div>
           </div>
           <div className="job-company">Für Kunden und Eigenprojekte</div>
           <div className="job-description">
