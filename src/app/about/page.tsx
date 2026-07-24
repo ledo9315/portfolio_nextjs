@@ -19,6 +19,7 @@ import {
   MdFavorite as Heart,
 } from "react-icons/md";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
@@ -37,91 +38,132 @@ function AboutContent() {
         className="pt-20 pb-16 md:pt-32 md:pb-24"
         aria-labelledby="about-title"
       >
-        <div className="container mx-auto px-4 md:px-16 lg:px-32 max-w-7xl">
-          <div className="max-w-4xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={
-                heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
-              }
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              id="about-title"
-              className="text-4xl md:text-6xl font-hanson font-bold uppercase mb-6 leading-tight tracking-tight"
-            >
-              Das bin ich
-            </motion.h1>
-            {/* About Content */}
-            <div className="about-content">
-              <div className="about-text">
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={
-                    heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
-                  }
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                  className="text-content max-w-3xl"
-                  role="article"
-                  aria-describedby="about-description"
-                >
-                  <motion.p
-                    initial={{ opacity: 0, y: 30 }}
+        <div className="container mx-auto px-4 md:px-16 xl:px-32 max-w-7xl">
+          <div className="flex flex-col 2xl:flex-row 2xl:items-start gap-10 md:gap-14">
+            <div className="flex-1 min-w-0">
+              <motion.h1
+                initial={{ opacity: 0, y: 40 }}
+                animate={
+                  heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
+                }
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                id="about-title"
+                className="text-4xl md:text-6xl font-hanson font-bold uppercase mb-6 leading-tight tracking-tight"
+              >
+                Das bin ich
+              </motion.h1>
+              {/* About Content */}
+              <div className="about-content">
+                <div className="about-text">
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
                     animate={
-                      heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                      heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
                     }
-                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-                    id="about-description"
-                    className="text-lg leading-relaxed mb-6"
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                    className="text-content max-w-3xl"
+                    role="article"
+                    aria-describedby="about-description"
                   >
-                    Ich komme aus Flensburg und habe hier an der Hochschule{" "}
-                    <span className="font-semibold relative text-purple">
-                      Medieninformatik
-                    </span>{" "}
-                    studiert. Aktuell mache ich hier meinen Master in{" "}
-                    <span className="font-semibold relative text-purple">
-                      Angewandter Informatik
-                    </span>{" "}
-                    mit Schwerpunkt Cybersecurity. Meine Programmier-Kenntnisse
-                    habe ich durch
-                    kontinuierliches Lernen, praxisnahe Projekte und natürlich
-                    mein Studium aufgebaut. Was als Interesse begann, ist heute
-                    meine komplette Leidenschaft.
-                  </motion.p>
-                  <motion.p
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={
-                      heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                    }
-                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
-                    className="text-lg leading-relaxed mb-6"
-                  >
-                    Was mich richtig begeistert? Die Kombination aus{" "}
-                    <span className="font-semibold relative text-purple">
-                      kreativem Design
-                    </span>{" "}
-                    und{" "}
-                    <span className="font-semibold relative text-purple">
-                      sauberer Programmierung
-                    </span>
-                    . Eine Website muss nicht nur funktionieren - sie muss auch
-                    richtig gut aussehen und sich intuitiv bedienen lassen.
-                  </motion.p>
-                  <motion.p
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={
-                      heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                    }
-                    transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
-                    className="text-lg leading-relaxed mb-6"
-                  >
-                    Nach meinem Abschluss strebe ich eine Stelle im Bereich
-                    Webentwicklung an, um meine Kenntnisse in Frontend- und
-                    Full-Stack-Entwicklung weiter zu vertiefen. Neue
-                    Technologien faszinieren mich, aber ich setze nur das ein,
-                    was wirklich Sinn macht.
-                  </motion.p>
-                </motion.div>
+                    <motion.p
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={
+                        heroInView
+                          ? { opacity: 1, y: 0 }
+                          : { opacity: 0, y: 30 }
+                      }
+                      transition={{
+                        duration: 0.8,
+                        ease: "easeOut",
+                        delay: 0.6,
+                      }}
+                      id="about-description"
+                      className="text-lg leading-relaxed mb-6"
+                    >
+                      Ich komme aus Flensburg und habe hier an der Hochschule{" "}
+                      <span className="font-semibold relative text-purple">
+                        Medieninformatik
+                      </span>{" "}
+                      studiert. Aktuell mache ich hier meinen Master in{" "}
+                      <span className="font-semibold relative text-purple">
+                        Angewandter Informatik
+                      </span>{" "}
+                      mit Schwerpunkt Cybersecurity. Meine
+                      Programmier-Kenntnisse habe ich durch kontinuierliches
+                      Lernen, praxisnahe Projekte und natürlich mein Studium
+                      aufgebaut. Was als Interesse begann, ist heute meine
+                      komplette Leidenschaft.
+                    </motion.p>
+                    <motion.p
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={
+                        heroInView
+                          ? { opacity: 1, y: 0 }
+                          : { opacity: 0, y: 30 }
+                      }
+                      transition={{
+                        duration: 0.8,
+                        ease: "easeOut",
+                        delay: 0.8,
+                      }}
+                      className="text-lg leading-relaxed mb-6"
+                    >
+                      Was mich richtig begeistert? Die Kombination aus{" "}
+                      <span className="font-semibold relative text-purple">
+                        kreativem Design
+                      </span>{" "}
+                      und{" "}
+                      <span className="font-semibold relative text-purple">
+                        sauberer Programmierung
+                      </span>
+                      . Eine Website muss nicht nur funktionieren - sie muss
+                      auch richtig gut aussehen und sich intuitiv bedienen
+                      lassen.
+                    </motion.p>
+                    <motion.p
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={
+                        heroInView
+                          ? { opacity: 1, y: 0 }
+                          : { opacity: 0, y: 30 }
+                      }
+                      transition={{
+                        duration: 0.8,
+                        ease: "easeOut",
+                        delay: 1.0,
+                      }}
+                      className="text-lg leading-relaxed mb-6"
+                    >
+                      Nach meinem Abschluss strebe ich eine Stelle im Bereich
+                      Webentwicklung an, um meine Kenntnisse in Frontend- und
+                      Full-Stack-Entwicklung weiter zu vertiefen. Neue
+                      Technologien faszinieren mich, aber ich setze nur das ein,
+                      was wirklich Sinn macht.
+                    </motion.p>
+                  </motion.div>
+                </div>
               </div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={
+                heroInView
+                  ? { opacity: 1, scale: 1 }
+                  : { opacity: 0, scale: 0.96 }
+              }
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+              className="max-w-156 shrink-0 md:mt-4"
+            >
+              <Image
+                src="/img/profil_sw_2.jpg"
+                alt="Portrait von Leonid Domahalskyy"
+                width={1536}
+                height={1344}
+                priority
+                className="w-full object-cover rounded-2xl border border-white/[0.173]"
+              />
+            </motion.div>
           </div>
         </div>
       </motion.section>
@@ -140,7 +182,8 @@ function AboutContent() {
               {
                 icon: <GraduationCap className="w-5 h-5 text-purple" />,
                 title: "Was ich gerade mache",
-                description: "M.Sc. Angewandte Informatik\nSchwerpunkt Cybersecurity",
+                description:
+                  "M.Sc. Angewandte Informatik\nSchwerpunkt Cybersecurity",
                 delay: 0.4,
               },
               {

@@ -244,7 +244,7 @@ const CVPrintComponent = () => {
             </div>
             <div className="contact-item">
               <Phone size={12} />
-              <span>0176/41195609</span>
+              <span>01520/5892880</span>
             </div>
           </div>
         </div>
