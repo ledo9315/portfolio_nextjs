@@ -322,22 +322,6 @@ const CVPrintComponent = () => {
             Ausbildung zum Verfahrensmechaniker
           </div>
         </div>
-
-        <div className="job-entry">
-          <div className="job-header">
-            <div className="job-title">Mittlere Reife</div>
-            <div className="job-date">2013 - 2015</div>
-          </div>
-          <div className="job-company">VHS Flensburg</div>
-        </div>
-
-        <div className="job-entry">
-          <div className="job-header">
-            <div className="job-title">Berufsgrundbildungsjahr</div>
-            <div className="job-date">2010 - 2011</div>
-          </div>
-          <div className="job-company">BEK, Kappeln</div>
-        </div>
       </div>
 
       {/* Berufserfahrung */}
@@ -363,7 +347,7 @@ const CVPrintComponent = () => {
             <br />• Deployment und Server-Management
           </div>
           <div className="job-tech">
-            PHP, JavaScript, Laravel, React, Inertia, Vue, Livewire, Tailwind CSS, Statamic, Docker, Git, Github, Laravel Forge, Laravel Cloud, AWS, CI/CD, PEST, Testing, RESTful API, Deployment, Server-Management, MySQL, PostgreSQL
+            PHP, JavaScript, Laravel, React, Inertia, Livewire, Tailwind CSS, Statamic, Docker, Git, Github, Laravel Forge, Laravel Cloud, AWS, CI/CD, PEST, Testing, RESTful API, Deployment, Server-Management, MySQL, PostgreSQL
           </div>
         </div>
 
@@ -565,7 +549,7 @@ const CVPrintComponent = () => {
               <li>• PHP</li>
               <li>• React</li>
               <li>• Next.js</li>
-              <li>• Livewire</li>
+              <li>• Livewire, Inertia.js</li>
               <li>• CSS3, SCSS, Tailwind CSS</li>
               <li>• shadcn/ui, Bootstrap</li>
             </ul>
@@ -587,6 +571,7 @@ const CVPrintComponent = () => {
               <li>• Deno, OAK</li>
               <li>• Better-Auth</li>
               <li>• Stripe</li>
+              <li>• RESTful APIs</li>
             </ul>
           </div>
           <div className="skill-category">
@@ -610,9 +595,11 @@ const CVPrintComponent = () => {
             <ul className="skill-list">
               <li>• Git & GitHub</li>
               <li>• Vite</li>
-              <li>• Vercel</li>
+              <li>• CI/CD (GitHub Actions)</li>
+              <li>• Deployment: Vercel, Laravel Forge/Cloud</li>
               <li>• Docker</li>
-              <li>• Pest, Vitest</li>
+              <li>• Linux, Server-Management</li>
+              <li>• Testing: Pest, Vitest</li>
               <li>• Figma</li>
             </ul>
           </div>
